@@ -29,3 +29,19 @@ var swiper = new Swiper(".slide-content", {
             },
         },
       });
+
+
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTab = button.getAttribute("data-tab");
+
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabPanels.forEach((panel) => panel.classList.remove("active"));
+
+      button.classList.add("active");
+      document.getElementById(targetTab).classList.add("active");
+    });
+  });
