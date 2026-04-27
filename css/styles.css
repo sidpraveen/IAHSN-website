@@ -1,15 +1,22 @@
 
 
-
-
+/*navbar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
-    align-items: center;     /* vertically centers logo + links */
-    justify-content: flex-start; /* IMPORTANT: keeps everything starting from the left */
-    gap: 20px;               /* space between logo block and the menu */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
     padding: 16px 24px;
-    background-color: whitesmoke;
+    background: rgba(255, 255, 255, 0.8);
+    background-color: rgba(245, 245, 245, 0.6); /* whitesmoke but semi-transparent */
+    backdrop-filter: blur(10px);  
     font-family: "Lato", sans-serif;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .nav-logo {
@@ -18,8 +25,9 @@
     text-decoration: none;
 }
 .nav-logo-img {
-    height: 200px;     
+    height: 100px;     
     width: auto;
+    transition: height 0.3s ease;
 }
 
 .nav-menu {
@@ -41,6 +49,108 @@
     align-items: center;
     gap: 18px;
 }
+.navbar.scrolled {
+    padding: 8px 24px;
+    background-color: rgba(245, 245, 245, 0.95);
+}
+
+.navbar.scrolled .nav-logo-img {
+    height: 55px;
+}
+
+
+/*hero section */
+#hero-section {
+    position: relative;
+    margin-top: 135px; /* just push it down by navbar height */
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/purple hands.avif');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.01);
+}
+#hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(20, 0, 40, 0.6),
+        rgba(20, 0, 40, 0.4)
+    );
+}
+
+.hero-content {
+    position: relative;  /* keeps content above the overlay */
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 60px;
+}
+.hero-content h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+.hero-content .sub-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+/* hero buttons */
+.hero-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.hero-btn-1, .hero-btn-2 {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn-1 {
+  background-color: #F59E0B;
+  color: #1a1a1a;
+  border: none;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.hero-btn-1:hover {
+  background-color: #FBBF24;
+  color: white;
+}
+.hero-btn-2 {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero-btn-2:hover {
+  background-color: white;
+  color: #1a1a1a;
+}
+
+
+
 
 
 /*nav-donate button */
