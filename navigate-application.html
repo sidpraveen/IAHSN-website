@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HS Navigate Application | IAHSN</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar" aria-label="Primary navigation">
+                <a href="index.html" class="nav-logo" aria-label="IAHSN home">
+                    <img src="IAHSN Transparent Logo - New.png" alt="IAHSN logo" class="nav-logo-img" />
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#learn-hs">What is HS</a></li>
+                    <li class="nav-item"><a href="index.html#living-with-hs">Living With HS</a></li>
+                    <li class="nav-item"><a href="index.html#resources">Resources</a></li>
+                    <li class="nav-item"><a href="index.html#events-programs" aria-current="page">Programs</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                </ul>
+
+                <div class="nav-right">
+                    <div class="nav-socials">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <a href="#" class="donate-btn">Donate</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="application-hero">
+                <div class="application-hero-copy">
+                    <span class="eyebrow">HS Navigate Program</span>
+                    <h1>Apply for guided HS support.</h1>
+                    <p>
+                        Share a little about yourself so IAHSN can understand your goals and follow up
+                        about whether HS Navigate is a good fit for your needs.
+                    </p>
+                </div>
+            </section>
+
+            <section class="application-section">
+                <div class="section-inner application-layout">
+                    <aside class="application-intro">
+                        <span class="section-label">Application</span>
+                        <h2>Basic information</h2>
+                        <p>
+                            This form is a starting point for connection. Please avoid sharing urgent medical
+                            details here. If you are experiencing a medical emergency, call emergency services
+                            or contact a healthcare professional right away.
+                        </p>
+                    </aside>
+
+                    <form class="navigate-form" action="mailto:info@iahsn.org" method="post" enctype="text/plain">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" name="First name" required />
+                            </div>
+
+                            <div class="form-field">
+                                <label for="last-name">Last name</label>
+                                <input type="text" id="last-name" name="Last name" required />
+                            </div>
+
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="Email" required />
+                            </div>
+
+                            <div class="form-field">
+                                <label for="phone">Phone number</label>
+                                <input type="tel" id="phone" name="Phone number" />
+                            </div>
+
+                            <div class="form-field">
+                                <label for="age-range">Age range</label>
+                                <select id="age-range" name="Age range" required>
+                                    <option value="">Select one</option>
+                                    <option value="Under 18">Under 18</option>
+                                    <option value="18-24">18-24</option>
+                                    <option value="25-34">25-34</option>
+                                    <option value="35-44">35-44</option>
+                                    <option value="45-54">45-54</option>
+                                    <option value="55+">55+</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="location">City and state</label>
+                                <input type="text" id="location" name="City and state" />
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="connection">Which best describes you?</label>
+                            <select id="connection" name="Connection to HS" required>
+                                <option value="">Select one</option>
+                                <option value="I am living with HS">I am living with HS</option>
+                                <option value="I am a caregiver or family member">I am a caregiver or family member</option>
+                                <option value="I am seeking information for someone else">I am seeking information for someone else</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="goals">What would you like support with?</label>
+                            <textarea id="goals" name="Support goals" rows="5" placeholder="Examples: understanding HS, preparing for appointments, emotional support, finding community, navigating resources." required></textarea>
+                        </div>
+
+                        <fieldset class="form-field checkbox-group">
+                            <legend>Areas of interest</legend>
+                            <label><input type="checkbox" name="Areas of interest" value="HS education" /> HS education</label>
+                            <label><input type="checkbox" name="Areas of interest" value="Emotional wellness" /> Emotional wellness</label>
+                            <label><input type="checkbox" name="Areas of interest" value="Peer or community support" /> Peer or community support</label>
+                            <label><input type="checkbox" name="Areas of interest" value="Care navigation" /> Care navigation</label>
+                            <label><input type="checkbox" name="Areas of interest" value="Advocacy or awareness" /> Advocacy or awareness</label>
+                        </fieldset>
+
+                        <div class="form-field">
+                            <label for="contact-method">Preferred contact method</label>
+                            <select id="contact-method" name="Preferred contact method">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Either email or phone">Either email or phone</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field consent-field">
+                            <label>
+                                <input type="checkbox" name="Consent to contact" value="Yes" required />
+                                I understand IAHSN may contact me about the HS Navigate Program using the information I provided.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="form-submit-button">Submit Application</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="IAHSN Transparent Logo - New.png" alt="IAHSN logo" />
+                    <p>Education, support, and advocacy for people affected by Hidradenitis Suppurativa.</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@iahsn.org">info@iahsn.org</a></p>
+                </div>
+
+                <div class="footer-socials">
+                    <h4>Socials</h4>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer-newsletter" class="footer-newsletter">
+                <div>
+                    <h4>Stay connected</h4>
+                    <p>Get IAHSN updates, support opportunities, and community news.</p>
+                </div>
+                <button id="newsletter-btn">Join Our Newsletter</button>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 IAHSN. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
