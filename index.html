@@ -69,29 +69,124 @@
             </section>
 
             <section id="learn-hs" class="intro-section">
+                <button class="topic-back-arrow" type="button" data-understand-back aria-label="Back to Understand HS overview">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                </button>
                 <div class="section-inner intro-layout">
                     <div class="intro-copy">
-                        <span class="section-label">Understand HS</span>
-                        <h2>HS is a chronic inflammatory skin condition, and support can change the experience.</h2>
-                        <p>
-                            Symptoms can look different from person to person, and delays in diagnosis are common.
-                            IAHSN focuses on clear education, supportive conversations, and practical next steps.
-                        </p>
+                        <div class="intro-state intro-state-default">
+                            <span class="section-label">Understand HS</span>
+                            <h2>HS is a chronic inflammatory skin condition, and support can change the experience.</h2>
+                            <p>
+                                Symptoms can look different from person to person, and delays in diagnosis are common.
+                                IAHSN focuses on clear education, supportive conversations, and practical next steps.
+                            </p>
+                        </div>
+
+                        <div class="intro-state intro-state-symptoms" aria-hidden="true">
+                            <span class="section-label">Symptoms and Signs</span>
+                            <h2>HS can show up as painful bumps, draining sores, and recurring flares.</h2>
+                            <p>
+                                You deserve clear language and compassionate support. HS often appears in areas where
+                                skin rubs together, including the underarms, groin, inner thighs, buttocks, and under
+                                the breasts.
+                            </p>
+                            <div class="symptom-tags" aria-label="Common HS symptoms and signs">
+                                <span>Tender nodules</span>
+                                <span>Recurring abscesses</span>
+                                <span>Drainage or odor</span>
+                                <span>Sinus tracts</span>
+                                <span>Scarring</span>
+                                <span>Flare cycles</span>
+                            </div>
+                        </div>
+
+                        <div class="intro-state intro-state-wellness" aria-hidden="true">
+                            <span class="section-label">Emotional Wellness</span>
+                            <h2>The emotional weight of HS is real, and support should feel steady.</h2>
+                            <p>
+                                Pain, uncertainty, stigma, and flares can affect confidence, relationships, school,
+                                work, and daily routines. Emotional wellness means making room for care that is
+                                compassionate, practical, and never judgmental.
+                            </p>
+                            <div class="symptom-tags wellness-tags" aria-label="Emotional wellness supports">
+                                <span>Stress support</span>
+                                <span>Body confidence</span>
+                                <span>Flare planning</span>
+                                <span>Peer connection</span>
+                                <span>Self-advocacy</span>
+                            </div>
+                        </div>
+
+                        <div class="intro-state intro-state-resources" aria-hidden="true">
+                            <span class="section-label">Community Resources</span>
+                            <h2>No one should have to figure out HS care and support alone.</h2>
+                            <p>
+                                Community resources can help people find trusted education, prepare for appointments,
+                                connect with others, and discover programs that make the next step easier to take.
+                            </p>
+                            <div class="symptom-tags resource-tags" aria-label="Community resource options">
+                                <span>Education guides</span>
+                                <span>Care questions</span>
+                                <span>Support programs</span>
+                                <span>Community events</span>
+                                <span>Advocacy tools</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="quick-links" aria-label="Featured HS topics">
-                        <a href="#about-hs">
+                        <a href="#learn-hs" data-understand-trigger="symptoms">
                             <span>01</span>
                             Symptoms and signs
                         </a>
-                        <a href="#mental-health-hub">
+                        <a href="#learn-hs" data-understand-trigger="wellness">
                             <span>02</span>
                             Emotional wellness
                         </a>
-                        <a href="#resources">
+                        <a href="#learn-hs" data-understand-trigger="resources">
                             <span>03</span>
                             Community resources
                         </a>
+                    </div>
+
+                    <div class="topic-panel symptoms-panel" data-understand-panel="symptoms" aria-hidden="true">
+                        <div class="symptoms-panel-header">
+                            <span>What to Notice</span>
+                            <strong>Patterns matter</strong>
+                        </div>
+                        <ul>
+                            <li>Repeated painful lumps in the same body areas</li>
+                            <li>Sores that drain, heal slowly, or return after healing</li>
+                            <li>Tunnels under the skin or thickened scar tissue</li>
+                        </ul>
+                        <p>Tracking symptoms can make clinician conversations easier and help people feel less alone.</p>
+                    </div>
+
+                    <div class="topic-panel wellness-panel" data-understand-panel="wellness" aria-hidden="true">
+                        <div class="symptoms-panel-header">
+                            <span>Support Check-In</span>
+                            <strong>Care for the whole person</strong>
+                        </div>
+                        <ul>
+                            <li>Name what feels hard without minimizing it</li>
+                            <li>Build a flare plan for rest, school, work, and care</li>
+                            <li>Connect with people who understand the HS experience</li>
+                        </ul>
+                        <p>Emotional support can help transform isolation into steadier, more confident next steps.</p>
+                    </div>
+
+                    <div class="topic-panel resources-panel" data-understand-panel="resources" aria-hidden="true">
+                        <div class="symptoms-panel-header">
+                            <span>Find Your Next Step</span>
+                            <strong>Start with one useful resource</strong>
+                        </div>
+                        <ul>
+                            <li>Learn patient-friendly HS basics and common terms</li>
+                            <li>Prepare questions before appointments or referrals</li>
+                            <li>Explore programs, events, and community support</li>
+                        </ul>
+                        <p>Resources work best when they are easy to understand, easy to share, and easy to return to.</p>
                     </div>
                 </div>
             </section>

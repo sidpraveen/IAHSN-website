@@ -57,3 +57,57 @@ if (document.querySelector(".slide-content") && window.Swiper) {
       document.getElementById(targetTab).classList.add("active");
     });
   });
+
+const understandSection = document.querySelector("#learn-hs");
+const defaultIntroState = document.querySelector(".intro-state-default");
+const topicTriggers = document.querySelectorAll("[data-understand-trigger]");
+const topicBackButtons = document.querySelectorAll("[data-understand-back]");
+const topicStates = document.querySelectorAll(".intro-state:not(.intro-state-default)");
+const topicPanels = document.querySelectorAll("[data-understand-panel]");
+
+if (understandSection && defaultIntroState && topicTriggers.length && topicStates.length && topicPanels.length) {
+  const topicClasses = ["topic-active", "symptoms-active", "wellness-active", "resources-active"];
+
+  const resetUnderstandSection = () => {
+    understandSection.classList.remove(...topicClasses);
+    defaultIntroState.setAttribute("aria-hidden", "false");
+    topicStates.forEach((state) => state.setAttribute("aria-hidden", "true"));
+    topicPanels.forEach((panel) => panel.setAttribute("aria-hidden", "true"));
+  };
+
+  const activateUnderstandTopic = (topic) => {
+    resetUnderstandSection();
+    understandSection.classList.add("topic-active", `${topic}-active`);
+    defaultIntroState.setAttribute("aria-hidden", "true");
+    document.querySelector(`.intro-state-${topic}`)?.setAttribute("aria-hidden", "false");
+    document.querySelector(`[data-understand-panel="${topic}"]`)?.setAttribute("aria-hidden", "false");
+  };
+
+  topicTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.preventDefault();
+      activateUnderstandTopic(trigger.getAttribute("data-understand-trigger"));
+      understandSection.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+
+  topicBackButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      resetUnderstandSection();
+      understandSection.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (!understandSection.classList.contains("topic-active")) {
+      return;
+    }
+
+    const sectionBounds = understandSection.getBoundingClientRect();
+    const hasScrolledAway = sectionBounds.bottom < window.innerHeight * 0.22 || sectionBounds.top > window.innerHeight * 0.78;
+
+    if (hasScrolledAway) {
+      resetUnderstandSection();
+    }
+  }, { passive: true });
+}
