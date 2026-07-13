@@ -83,17 +83,15 @@ a {
 }
 
 .nav-logo-img {
-    height: 210px;
+    height: 130px;
     width: auto;
     max-width: none;
     display: block;
-    transform: translateY(32px);
     transition: height 0.25s ease;
 }
 
 .navbar.scrolled .nav-logo-img {
-    height: 150px;
-    transform: translateY(24px);
+    height: 86px;
 }
 
 .nav-menu {
@@ -1051,6 +1049,10 @@ a {
     line-height: 1;
 }
 
+.about-stat span {
+    min-height: 84px;
+}
+
 footer {
     padding: 54px 0 24px;
     color: #ffffff;
@@ -1069,6 +1071,9 @@ footer {
     grid-template-columns: minmax(260px, 1.1fr) minmax(180px, 0.6fr) minmax(180px, 0.6fr);
     gap: 34px;
     align-items: start;
+    margin-top: 34px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .footer-brand img {
@@ -1112,7 +1117,7 @@ footer {
 
 .footer-newsletter {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 24px;
     margin-top: 36px;
@@ -1120,7 +1125,14 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.14);
 }
 
+.newsletter-benefits {
+    margin: 12px 0 14px 20px;
+    color: #d1d5db;
+    line-height: 1.7;
+}
+
 #newsletter-btn {
+    flex: 0 0 auto;
     min-height: 44px;
     padding: 0 22px;
     color: #111827;
@@ -1271,6 +1283,10 @@ footer {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.director-board-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .board-card {
     overflow: hidden;
 }
@@ -1295,6 +1311,20 @@ footer {
     font-weight: 900;
 }
 
+.student-board-heading {
+    margin-top: 42px;
+    margin-bottom: 18px;
+}
+
+.student-board-heading h3 {
+    color: var(--iahsn-blue-dark);
+    font-size: 1.55rem;
+}
+
+.student-board-card {
+    min-height: 150px;
+}
+
 .board-photo-placeholder {
     display: grid;
     place-items: center;
@@ -1316,6 +1346,18 @@ footer {
     object-fit: cover;
     object-position: center 38%;
     background: var(--iahsn-purple-soft);
+}
+
+.board-photo-donna {
+    object-position: center 14%;
+}
+
+.board-photo-corley {
+    object-position: center 12%;
+}
+
+.student-board-photo {
+    object-position: center 35%;
 }
 
 .about-cta-section {
@@ -1468,8 +1510,7 @@ footer {
     }
 
     .nav-logo-img {
-        height: 150px;
-        transform: translateY(20px);
+        height: 110px;
     }
 
     .nav-right {
