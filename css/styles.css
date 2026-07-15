@@ -83,7 +83,7 @@ a {
 }
 
 .nav-logo-img {
-    height: 130px;
+    height: 108px;
     width: auto;
     max-width: none;
     display: block;
@@ -91,7 +91,7 @@ a {
 }
 
 .navbar.scrolled .nav-logo-img {
-    height: 86px;
+    height: 72px;
 }
 
 .nav-menu {
