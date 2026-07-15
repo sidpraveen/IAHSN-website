@@ -53,11 +53,12 @@ a {
     left: 0;
     width: 100%;
     z-index: 1000;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) auto minmax(160px, 1fr);
     align-items: center;
-    gap: 28px;
-    height: 120px;
-    padding: 14px 6%;
+    column-gap: 28px;
+    height: 122px;
+    padding: 12px 6% 20px;
     background: rgba(255, 255, 255, 0.94);
     border-bottom: 4px solid transparent;
     border-image: linear-gradient(90deg, var(--iahsn-purple), var(--iahsn-cyan), var(--iahsn-lime), var(--iahsn-orange), var(--iahsn-magenta)) 1;
@@ -66,24 +67,25 @@ a {
 }
 
 .navbar.scrolled {
-    height: 86px;
+    height: 88px;
+    padding-top: 10px;
+    padding-bottom: 16px;
     box-shadow: 0 14px 34px rgba(24, 32, 47, 0.1);
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
+    justify-self: start;
     text-decoration: none;
-    flex: 0 0 auto;
     height: 100%;
     overflow: visible;
     position: relative;
     z-index: 1002;
-    margin-right: 18px;
 }
 
 .nav-logo-img {
-    height: 108px;
+    height: 96px;
     width: auto;
     max-width: none;
     display: block;
@@ -91,17 +93,16 @@ a {
 }
 
 .navbar.scrolled .nav-logo-img {
-    height: 72px;
+    height: 62px;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
     gap: 24px;
     list-style: none;
-    position: relative;
+    justify-self: center;
     z-index: 1001;
 }
 
@@ -124,8 +125,8 @@ a {
 .nav-right {
     display: flex;
     align-items: center;
+    justify-self: end;
     gap: 18px;
-    flex: 0 0 auto;
 }
 
 .nav-socials,
@@ -1390,6 +1391,7 @@ footer {
 
 @media screen and (max-width: 1080px) {
     .navbar {
+        display: flex;
         flex-wrap: wrap;
         gap: 16px;
         padding: 12px 5%;
@@ -1400,6 +1402,7 @@ footer {
         order: 3;
         width: 100%;
         justify-content: flex-start;
+        justify-self: auto;
         gap: 18px;
         overflow-x: auto;
         padding-bottom: 4px;
@@ -1510,7 +1513,7 @@ footer {
     }
 
     .nav-logo-img {
-        height: 110px;
+        height: 88px;
     }
 
     .nav-right {
