@@ -126,7 +126,7 @@ a {
     display: flex;
     align-items: center;
     justify-self: end;
-    gap: 18px;
+    gap: 10px;
 }
 
 .nav-socials,
@@ -147,24 +147,41 @@ a {
     transform: translateY(-1px);
 }
 
-.donate-btn {
+.donate-btn,
+.nav-action-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 42px;
     padding: 0 20px;
-    color: #0d2412;
-    background: linear-gradient(135deg, #8fdc2f, #25c45a);
     border-radius: 7px;
     font-weight: 900;
     text-decoration: none;
-    box-shadow: 0 12px 24px rgba(37, 196, 90, 0.28);
-    transition: filter 0.2s ease, transform 0.2s ease;
+    transition: filter 0.2s ease, transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-.donate-btn:hover {
+.donate-btn {
+    color: #0d2412;
+    background: linear-gradient(135deg, #8fdc2f, #25c45a);
+    box-shadow: 0 12px 24px rgba(37, 196, 90, 0.28);
+}
+
+.nav-action-btn-secondary {
+    color: #29405f;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(41, 64, 95, 0.18);
+    box-shadow: 0 10px 22px rgba(26, 44, 70, 0.08);
+}
+
+.donate-btn:hover,
+.nav-action-btn:hover {
     filter: saturate(1.15) brightness(1.02);
     transform: translateY(-1px);
+}
+
+.nav-action-btn-secondary:hover {
+    background: #ffffff;
+    border-color: rgba(37, 196, 90, 0.34);
 }
 
 #hero-section {
@@ -1518,11 +1535,13 @@ footer {
 
     .nav-right {
         margin-left: auto;
+        gap: 6px;
     }
 
-    .donate-btn {
+    .donate-btn,
+    .nav-action-btn {
         min-height: 38px;
-        padding: 0 14px;
+        padding: 0 10px;
         font-size: 0.9rem;
     }
 
