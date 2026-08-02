@@ -1073,11 +1073,17 @@ a {
     margin-top: 16px;
 }
 
+.mindful-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
 .mindful-registration {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    margin-top: 24px;
     padding: 0 20px;
     color: #ffffff;
     background: linear-gradient(135deg, #258277, #69a977);
@@ -1105,15 +1111,12 @@ a {
 }
 
 .mindful-logo {
-    position: absolute;
-    right: clamp(28px, 5vw, 86px);
-    bottom: 18px;
-    width: clamp(120px, 15vw, 205px);
+    display: block;
+    width: clamp(96px, 11vw, 140px);
     height: auto;
-    opacity: 0.13;
+    opacity: 0.95;
     mix-blend-mode: multiply;
-    filter: saturate(0.85);
-    pointer-events: none;
+    filter: saturate(0.92);
 }
 
 .mindful-highlights {
@@ -1526,7 +1529,6 @@ a {
     display: inline-flex;
     align-items: center;
     min-height: 44px;
-    margin-top: 24px;
     padding: 0 20px;
     color: #ffffff;
     background: linear-gradient(135deg, var(--iahsn-purple), var(--iahsn-blue));
@@ -2280,11 +2282,14 @@ footer {
         padding: 46px 0;
     }
 
+    .mindful-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
     .mindful-logo {
-        right: 20px;
-        bottom: 14px;
-        width: 110px;
-        opacity: 0.1;
+        width: 112px;
     }
 
     .about-hero {
