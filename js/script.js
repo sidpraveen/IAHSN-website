@@ -111,3 +111,45 @@ if (understandSection && defaultIntroState && topicTriggers.length && topicState
     }
   }, { passive: true });
 }
+
+const azSearchInput = document.querySelector("[data-az-search]");
+const azSearchForm = document.querySelector("#az-search");
+const azTopicCards = document.querySelectorAll("[data-topic-card]");
+const azLetterSections = document.querySelectorAll("[data-letter-section]");
+const azCount = document.querySelector("[data-az-count]");
+const azEmptyState = document.querySelector("[data-az-empty]");
+
+if (azSearchInput && azTopicCards.length) {
+  const updateAzSearch = () => {
+    const query = azSearchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    azTopicCards.forEach((card) => {
+      const matches = !query || card.dataset.topic.includes(query);
+      card.hidden = !matches;
+      if (matches) {
+        visibleCount += 1;
+      }
+    });
+
+    azLetterSections.forEach((section) => {
+      section.hidden = !section.querySelector("[data-topic-card]:not([hidden])");
+    });
+
+    if (azCount) {
+      azCount.textContent = query
+        ? `${visibleCount} matching topic${visibleCount === 1 ? "" : "s"}`
+        : `${azTopicCards.length} topics available`;
+    }
+
+    if (azEmptyState) {
+      azEmptyState.hidden = visibleCount !== 0;
+    }
+  };
+
+  azSearchInput.addEventListener("input", updateAzSearch);
+  azSearchForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    updateAzSearch();
+  });
+}

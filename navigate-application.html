@@ -17,137 +17,95 @@
     <body>
         <header>
             <nav class="navbar" aria-label="Primary navigation">
+                <div class="nav-topbar">
+                    <div class="nav-topbar-inner">
+                        <a href="index.html#events-programs" class="nav-top-link">HS Coaching</a>
+                        <div class="nav-top-actions">
+                            <a href="index.html#online-shop" class="nav-action-btn nav-action-btn-secondary">Shop Online</a>
+                            <a href="#" class="donate-btn">Donate</a>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="index.html" class="nav-logo" aria-label="IAHSN home">
                     <img src="Logos/new-new-logo-transparent.png" alt="IAHSN logo" class="nav-logo-img" />
                 </a>
 
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html#learn-hs">What is HS</a></li>
-                    <li class="nav-item"><a href="index.html#living-with-hs">Living With HS</a></li>
-                    <li class="nav-item"><a href="index.html#resources">Resources</a></li>
-                    <li class="nav-item"><a href="index.html#events-programs" aria-current="page">Programs</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html#events-programs" aria-current="page" aria-haspopup="true">Programs</a>
+                        <ul class="nav-dropdown" aria-label="Programs submenu">
+                            <li><a href="index.html#events-programs">HS Navigate™</a></li>
+                            <li><a href="index.html#about-hs">Mindful Blocc™</a></li>
+                            <li><a href="#">One-on-One Mentor Program</a></li>
+                            <li><a href="#">Student Ambassador Program</a></li>
+                            <li><a href="#">Community Ambassador Program</a></li>
+                            <li><a href="#">Voices of HS™ (Digital Storytelling Initiative)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html#resources" aria-haspopup="true">Resources</a>
+                        <ul class="nav-dropdown" aria-label="Resources submenu">
+                            <li><a href="health-a-z.html">Health A–Z</a></li>
+                            <li><a href="index.html#learn-hs">Understand HS</a></li>
+                            <li><a href="index.html#mental-health-hub">Mental Health Hub</a></li>
+                            <li><a href="index.html#online-shop">Digital Downloads</a></li>
+                            <li><a href="#">HS Action Plan</a></li>
+                            <li><a href="#">Educational Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" aria-haspopup="true">Community</a>
+                        <ul class="nav-dropdown" aria-label="Community submenu">
+                            <li><a href="#">Community Support Groups</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="index.html#footer-newsletter">HS Speaks™</a></li>
+                            <li><a href="#">HS Education &amp; Community Day</a></li>
+                            <li><a href="#">Volunteer Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" aria-haspopup="true">Advocacy</a>
+                        <ul class="nav-dropdown" aria-label="Advocacy submenu">
+                            <li><a href="#">HS Patient Advocacy Collaborative (HS PAC)</a></li>
+                            <li><a href="#">Advocacy Campaigns</a></li>
+                            <li><a href="#">Legislative Updates</a></li>
+                            <li><a href="#">Community Action Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#">Members</a></li>
+                    <li class="nav-item"><a href="health-a-z.html">Health A-Z</a></li>
                     <li class="nav-item"><a href="about.html">About</a></li>
                 </ul>
 
-                <div class="nav-right">
-                    <a href="#" class="nav-action-btn nav-action-btn-secondary">Online</a>
-                    <a href="#" class="nav-action-btn nav-action-btn-secondary">Shop</a>
-                    <a href="#" class="donate-btn">Donate</a>
-                </div>
             </nav>
         </header>
 
         <main>
             <section class="application-hero">
                 <div class="application-hero-copy">
-                    <span class="eyebrow">HS Navigate Program</span>
-                    <h1>Apply for guided HS support.</h1>
+                    <h1>HS Navigate™ is coming soon.</h1>
                     <p>
-                        Share a little about yourself so IAHSN can understand your goals and follow up
-                        about whether HS Navigate is a good fit for your needs.
+                        IAHSN is preparing its 7-week educational coaching program for people newly diagnosed with HS.
+                        Visit the program overview for details about what participants will learn and how the program is structured.
                     </p>
-                </div>
-            </section>
-
-            <section class="application-section">
-                <div class="section-inner application-layout">
-                    <aside class="application-intro">
-                        <span class="section-label">Application</span>
-                        <h2>Basic information</h2>
-                        <p>
-                            This form is a starting point for connection. Please avoid sharing urgent medical
-                            details here. If you are experiencing a medical emergency, call emergency services
-                            or contact a healthcare professional right away.
-                        </p>
-                    </aside>
-
-                    <form class="navigate-form" action="mailto:info@iahsn.org" method="post" enctype="text/plain">
-                        <div class="form-grid">
-                            <div class="form-field">
-                                <label for="first-name">First name</label>
-                                <input type="text" id="first-name" name="First name" required />
-                            </div>
-
-                            <div class="form-field">
-                                <label for="last-name">Last name</label>
-                                <input type="text" id="last-name" name="Last name" required />
-                            </div>
-
-                            <div class="form-field">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="Email" required />
-                            </div>
-
-                            <div class="form-field">
-                                <label for="phone">Phone number</label>
-                                <input type="tel" id="phone" name="Phone number" />
-                            </div>
-
-                            <div class="form-field">
-                                <label for="age-range">Age range</label>
-                                <select id="age-range" name="Age range" required>
-                                    <option value="">Select one</option>
-                                    <option value="Under 18">Under 18</option>
-                                    <option value="18-24">18-24</option>
-                                    <option value="25-34">25-34</option>
-                                    <option value="35-44">35-44</option>
-                                    <option value="45-54">45-54</option>
-                                    <option value="55+">55+</option>
-                                </select>
-                            </div>
-
-                            <div class="form-field">
-                                <label for="location">City and state</label>
-                                <input type="text" id="location" name="City and state" />
-                            </div>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="connection">Which best describes you?</label>
-                            <select id="connection" name="Connection to HS" required>
-                                <option value="">Select one</option>
-                                <option value="I am living with HS">I am living with HS</option>
-                                <option value="I am a caregiver or family member">I am a caregiver or family member</option>
-                                <option value="I am seeking information for someone else">I am seeking information for someone else</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="goals">What would you like support with?</label>
-                            <textarea id="goals" name="Support goals" rows="5" placeholder="Examples: understanding HS, preparing for appointments, emotional support, finding community, navigating resources." required></textarea>
-                        </div>
-
-                        <fieldset class="form-field checkbox-group">
-                            <legend>Areas of interest</legend>
-                            <label><input type="checkbox" name="Areas of interest" value="HS education" /> HS education</label>
-                            <label><input type="checkbox" name="Areas of interest" value="Emotional wellness" /> Emotional wellness</label>
-                            <label><input type="checkbox" name="Areas of interest" value="Peer or community support" /> Peer or community support</label>
-                            <label><input type="checkbox" name="Areas of interest" value="Care navigation" /> Care navigation</label>
-                            <label><input type="checkbox" name="Areas of interest" value="Advocacy or awareness" /> Advocacy or awareness</label>
-                        </fieldset>
-
-                        <div class="form-field">
-                            <label for="contact-method">Preferred contact method</label>
-                            <select id="contact-method" name="Preferred contact method">
-                                <option value="Email">Email</option>
-                                <option value="Phone">Phone</option>
-                                <option value="Either email or phone">Either email or phone</option>
-                            </select>
-                        </div>
-
-                        <div class="form-field consent-field">
-                            <label>
-                                <input type="checkbox" name="Consent to contact" value="Yes" required />
-                                I understand IAHSN may contact me about the HS Navigate Program using the information I provided.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="form-submit-button">Submit Application</button>
-                    </form>
+                    <a href="index.html#events-programs" class="application-return-link">View Program Overview</a>
                 </div>
             </section>
         </main>
+
+        <section class="sponsors-band" aria-label="Sponsors">
+            <div class="sponsors-band-inner">
+                <div class="sponsors-logo-row">
+                    <img src="Sponsors%20images/HS%20Foundation%20Logo.png" alt="HS Foundation" />
+                    <img src="Sponsors%20images/MCN%20Logo.png" alt="MCN" />
+                    <img src="Sponsors%20images/Novartis.png" alt="Novartis" />
+                    <img src="Sponsors%20images/UCB%20Logo.png" alt="UCB" />
+                </div>
+            </div>
+        </section>
 
         <footer>
             <div id="footer-newsletter" class="footer-newsletter">
@@ -192,6 +150,10 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 IAHSN. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="Terms and Privacy Policy/Terms%20%26%20Conditions.pdf" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+                    <a href="Terms and Privacy Policy/Privacy%20Poicy.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
             </div>
         </footer>
 

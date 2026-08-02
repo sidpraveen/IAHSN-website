@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Health A-Z | IAHSN</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar" aria-label="Primary navigation">
+                <div class="nav-topbar">
+                    <div class="nav-topbar-inner">
+                        <a href="index.html#events-programs" class="nav-top-link">HS Coaching</a>
+                        <div class="nav-top-actions">
+                            <a href="index.html#online-shop" class="nav-action-btn nav-action-btn-secondary">Shop Online</a>
+                            <a href="#" class="donate-btn">Donate</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="index.html" class="nav-logo" aria-label="IAHSN home">
+                    <img src="Logos/new-new-logo-transparent.png" alt="IAHSN logo" class="nav-logo-img" />
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html#learn-hs">What is HS</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html#events-programs" aria-haspopup="true">Programs</a>
+                        <ul class="nav-dropdown" aria-label="Programs submenu">
+                            <li><a href="index.html#events-programs">HS Navigate™</a></li>
+                            <li><a href="index.html#about-hs">Mindful Blocc™</a></li>
+                            <li><a href="#">One-on-One Mentor Program</a></li>
+                            <li><a href="#">Student Ambassador Program</a></li>
+                            <li><a href="#">Community Ambassador Program</a></li>
+                            <li><a href="#">Voices of HS™ (Digital Storytelling Initiative)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html#resources" aria-haspopup="true">Resources</a>
+                        <ul class="nav-dropdown" aria-label="Resources submenu">
+                            <li><a href="health-a-z.html">Health A–Z</a></li>
+                            <li><a href="index.html#learn-hs">Understand HS</a></li>
+                            <li><a href="index.html#mental-health-hub">Mental Health Hub</a></li>
+                            <li><a href="index.html#online-shop">Digital Downloads</a></li>
+                            <li><a href="#">HS Action Plan</a></li>
+                            <li><a href="#">Educational Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" aria-haspopup="true">Community</a>
+                        <ul class="nav-dropdown" aria-label="Community submenu">
+                            <li><a href="#">Community Support Groups</a></li>
+                            <li><a href="#">Webinars</a></li>
+                            <li><a href="#">Podcasts</a></li>
+                            <li><a href="index.html#footer-newsletter">HS Speaks™</a></li>
+                            <li><a href="#">HS Education &amp; Community Day</a></li>
+                            <li><a href="#">Volunteer Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" aria-haspopup="true">Advocacy</a>
+                        <ul class="nav-dropdown" aria-label="Advocacy submenu">
+                            <li><a href="#">HS Patient Advocacy Collaborative (HS PAC)</a></li>
+                            <li><a href="#">Advocacy Campaigns</a></li>
+                            <li><a href="#">Legislative Updates</a></li>
+                            <li><a href="#">Community Action Opportunities</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#">Members</a></li>
+                    <li class="nav-item"><a href="health-a-z.html" aria-current="page">Health A-Z</a></li>
+                    <li class="nav-item"><a href="about.html">About</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <main>
+            <section class="health-az-hero">
+                <img src="Health%20A-Z/Health%20A-Z%20Banner.png" alt="Health A-Z banner" />
+            </section>
+
+            <section class="health-az-intro">
+                <div class="section-inner health-az-intro-grid">
+                    <div>
+                        <h2>Find clear answers, one topic at a time.</h2>
+                        <p>
+                            Use this A-Z library to explore HS language, common symptoms, care terms, emotional wellness topics,
+                            and practical tools you may hear about during appointments or while learning to manage HS.
+                        </p>
+                    </div>
+                    <form class="health-search-panel" id="az-search" role="search">
+                        <label for="az-search-input">Search by keyword</label>
+                        <div class="health-search-control">
+                            <input id="az-search-input" type="search" placeholder="Search topics like biologics, flares, pain, wound care..." data-az-search />
+                            <button type="submit">Search Topic</button>
+                        </div>
+                        <p data-az-count>110 topics available</p>
+                    </form>
+                </div>
+            </section>
+
+            <section class="health-az-library">
+                <div class="section-inner">
+                    <div class="az-empty-state" data-az-empty hidden>
+                        <h2>No matching topics found</h2>
+                        <p>Try a different keyword or clear your search to browse the full Health A-Z library.</p>
+                    </div>
+
+                    <section class="az-letter-section" id="letter-A" data-letter-section>
+                        <h2>A</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-abscesses" data-topic-card data-topic="abscesses an abscess is a painful, swollen lump beneath the skin that is often filled with pus. in hidradenitis suppurativa (hs), abscesses commonly develop in areas where skin rubs together, such as the underarms, groin, buttocks, breasts, and inner thighs. they may become inflamed, drain fluid, and recur over time. early treatment can help reduce pain, promote healing, and lower the risk of scarring and tunnel (sinus tract) formation.">
+                            <h3>Abscesses</h3>
+                            <p>An abscess is a painful, swollen lump beneath the skin that is often filled with pus. In hidradenitis suppurativa (HS), abscesses commonly develop in areas where skin rubs together, such as the underarms, groin, buttocks, breasts, and inner thighs. They may become inflamed, drain fluid, and recur over time. Early treatment can help reduce pain, promote healing, and lower the risk of scarring and tunnel (sinus tract) formation.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-acne-conglobata" data-topic-card data-topic="acne conglobata acne conglobata is a rare, severe form of acne that causes deep, painful nodules, abscesses, and scarring. although it is different from hs, some people may have both conditions. a dermatologist can help determine the correct diagnosis and recommend the most appropriate treatment.">
+                            <h3>Acne Conglobata</h3>
+                            <p>Acne conglobata is a rare, severe form of acne that causes deep, painful nodules, abscesses, and scarring. Although it is different from HS, some people may have both conditions. A dermatologist can help determine the correct diagnosis and recommend the most appropriate treatment.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-adhesive-bandages" data-topic-card data-topic="adhesive bandages adhesive bandages and dressings help protect draining wounds, absorb fluid, and reduce irritation from clothing. because hs skin can be sensitive, choosing gentle, skin-friendly products may help prevent discomfort and skin damage. your healthcare provider or wound care specialist can recommend dressings that best meet your needs.">
+                            <h3>Adhesive Bandages</h3>
+                            <p>Adhesive bandages and dressings help protect draining wounds, absorb fluid, and reduce irritation from clothing. Because HS skin can be sensitive, choosing gentle, skin-friendly products may help prevent discomfort and skin damage. Your healthcare provider or wound care specialist can recommend dressings that best meet your needs.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-antibiotics" data-topic-card data-topic="antibiotics antibiotics are medications used to treat bacterial infections and reduce inflammation. in hs, they may be prescribed during flares or as part of a long-term treatment plan. it is important to take antibiotics exactly as directed and discuss any concerns or side effects with your healthcare provider.">
+                            <h3>Antibiotics</h3>
+                            <p>Antibiotics are medications used to treat bacterial infections and reduce inflammation. In HS, they may be prescribed during flares or as part of a long-term treatment plan. It is important to take antibiotics exactly as directed and discuss any concerns or side effects with your healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-anti-inflammatory-diet" data-topic-card data-topic="anti-inflammatory diet an anti-inflammatory diet focuses on eating foods that may help reduce inflammation throughout the body. while no single diet works for everyone with hs, many people find that eating more fruits, vegetables, whole grains, lean proteins, and healthy fats supports their overall health. keeping a food journal may help you identify foods that affect your symptoms.">
+                            <h3>Anti-inflammatory Diet</h3>
+                            <p>An anti-inflammatory diet focuses on eating foods that may help reduce inflammation throughout the body. While no single diet works for everyone with HS, many people find that eating more fruits, vegetables, whole grains, lean proteins, and healthy fats supports their overall health. Keeping a food journal may help you identify foods that affect your symptoms.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-anxiety" data-topic-card data-topic="anxiety living with hs can be physically and emotionally challenging. many people experience anxiety related to pain, flare-ups, body image, or uncertainty about the future. talking with a healthcare provider, counselor, or support group can provide helpful strategies for managing anxiety and improving emotional well-being.">
+                            <h3>Anxiety</h3>
+                            <p>Living with HS can be physically and emotionally challenging. Many people experience anxiety related to pain, flare-ups, body image, or uncertainty about the future. Talking with a healthcare provider, counselor, or support group can provide helpful strategies for managing anxiety and improving emotional well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-autoimmune-vs-autoinflammatory-diseases" data-topic-card data-topic="autoimmune vs. autoinflammatory diseases although they sound similar, autoimmune and autoinflammatory diseases are different. hs is considered an autoinflammatory disease, meaning the immune system becomes overactive and causes inflammation without attacking healthy tissues like it does in autoimmune diseases. understanding the difference can help you better understand your condition and treatment options.">
+                            <h3>Autoimmune vs. Autoinflammatory Diseases</h3>
+                            <p>Although they sound similar, autoimmune and autoinflammatory diseases are different. HS is considered an autoinflammatory disease, meaning the immune system becomes overactive and causes inflammation without attacking healthy tissues like it does in autoimmune diseases. Understanding the difference can help you better understand your condition and treatment options.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-advocacy" data-topic-card data-topic="advocacy advocacy means speaking up for yourself and others to improve healthcare, awareness, and access to resources. this may include asking questions during medical appointments, sharing your hs journey, educating others, or supporting efforts to improve care for the hs community. every voice can make a difference.">
+                            <h3>Advocacy</h3>
+                            <p>Advocacy means speaking up for yourself and others to improve healthcare, awareness, and access to resources. This may include asking questions during medical appointments, sharing your HS journey, educating others, or supporting efforts to improve care for the HS community. Every voice can make a difference.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-B" data-letter-section>
+                        <h2>B</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-biologic-medications" data-topic-card data-topic="biologic medications biologic medications are advanced treatments that target specific parts of the immune system responsible for inflammation. for some people with moderate to severe hs, biologics can help reduce flare-ups, pain, and new lesions. your healthcare provider can discuss whether a biologic may be right for you.">
+                            <h3>Biologic Medications</h3>
+                            <p>Biologic medications are advanced treatments that target specific parts of the immune system responsible for inflammation. For some people with moderate to severe HS, biologics can help reduce flare-ups, pain, and new lesions. Your healthcare provider can discuss whether a biologic may be right for you.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-biopsy" data-topic-card data-topic="biopsy a biopsy is a procedure in which a small sample of skin is removed and examined under a microscope. most people with hs do not need a biopsy because the condition is usually diagnosed through a physical examination and medical history. however, a biopsy may be performed if another skin condition is suspected.">
+                            <h3>Biopsy</h3>
+                            <p>A biopsy is a procedure in which a small sample of skin is removed and examined under a microscope. Most people with HS do not need a biopsy because the condition is usually diagnosed through a physical examination and medical history. However, a biopsy may be performed if another skin condition is suspected.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-body-image" data-topic-card data-topic="body image hs can affect how people feel about their appearance because of scars, drainage, or changes in the skin. these feelings are common and can affect confidence and relationships. learning to practice self-compassion and seeking emotional support can help improve body image and self-esteem.">
+                            <h3>Body Image</h3>
+                            <p>HS can affect how people feel about their appearance because of scars, drainage, or changes in the skin. These feelings are common and can affect confidence and relationships. Learning to practice self-compassion and seeking emotional support can help improve body image and self-esteem.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-body-mass-index-bmi" data-topic-card data-topic="body mass index (bmi) body mass index (bmi) is a measurement that compares height and weight to estimate body size. although bmi is one tool healthcare providers may use, it does not measure overall health. your provider will consider many factors when discussing your health and treatment plan.">
+                            <h3>Body Mass Index (BMI)</h3>
+                            <p>Body Mass Index (BMI) is a measurement that compares height and weight to estimate body size. Although BMI is one tool healthcare providers may use, it does not measure overall health. Your provider will consider many factors when discussing your health and treatment plan.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-boils" data-topic-card data-topic="boils many people mistake hs lesions for boils. while hs can look similar, it is a chronic inflammatory disease—not simply recurring boils. receiving an accurate diagnosis is an important step toward getting appropriate treatment and preventing disease progression.">
+                            <h3>Boils</h3>
+                            <p>Many people mistake HS lesions for boils. While HS can look similar, it is a chronic inflammatory disease—not simply recurring boils. Receiving an accurate diagnosis is an important step toward getting appropriate treatment and preventing disease progression.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-bacterial-infections" data-topic-card data-topic="bacterial infections hs itself is not caused by poor hygiene or a bacterial infection. however, open wounds can sometimes become infected with bacteria. signs of infection may include increasing redness, warmth, swelling, worsening pain, fever, or foul-smelling drainage. contact your healthcare provider if you think you may have an infection.">
+                            <h3>Bacterial Infections</h3>
+                            <p>HS itself is not caused by poor hygiene or a bacterial infection. However, open wounds can sometimes become infected with bacteria. Signs of infection may include increasing redness, warmth, swelling, worsening pain, fever, or foul-smelling drainage. Contact your healthcare provider if you think you may have an infection.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-C" data-letter-section>
+                        <h2>C</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-chronic-pain" data-topic-card data-topic="chronic pain many people with hs experience chronic pain that can affect daily activities, sleep, work, and emotional health. pain may come from inflamed nodules, abscesses, tunnels, or scarring. a personalized pain management plan can help improve comfort and quality of life.">
+                            <h3>Chronic Pain</h3>
+                            <p>Many people with HS experience chronic pain that can affect daily activities, sleep, work, and emotional health. Pain may come from inflamed nodules, abscesses, tunnels, or scarring. A personalized pain management plan can help improve comfort and quality of life.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-clinical-trials" data-topic-card data-topic="clinical trials clinical trials are research studies that help evaluate new medications, treatments, or approaches to care. participating in a clinical trial may give some people access to new therapies while helping researchers improve future hs treatment. participation is always voluntary.">
+                            <h3>Clinical Trials</h3>
+                            <p>Clinical trials are research studies that help evaluate new medications, treatments, or approaches to care. Participating in a clinical trial may give some people access to new therapies while helping researchers improve future HS treatment. Participation is always voluntary.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-coaching" data-topic-card data-topic="coaching coaching is a supportive, goal-focused partnership that helps you build knowledge, confidence, and practical skills to better manage life with hidradenitis suppurativa (hs). through education, encouragement, and personalized guidance, coaching empowers you to make informed decisions and take an active role in your health and well-being.">
+                            <h3>Coaching</h3>
+                            <p>Coaching is a supportive, goal-focused partnership that helps you build knowledge, confidence, and practical skills to better manage life with hidradenitis suppurativa (HS). Through education, encouragement, and personalized guidance, coaching empowers you to make informed decisions and take an active role in your health and well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-comorbidities" data-topic-card data-topic="comorbidities comorbidities are health conditions that occur alongside another condition. people living with hs may also experience conditions such as obesity, diabetes, arthritis, depression, anxiety, or inflammatory bowel disease. managing these conditions together can improve overall health and well-being.">
+                            <h3>Comorbidities</h3>
+                            <p>Comorbidities are health conditions that occur alongside another condition. People living with HS may also experience conditions such as obesity, diabetes, arthritis, depression, anxiety, or inflammatory bowel disease. Managing these conditions together can improve overall health and well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-coping-strategies" data-topic-card data-topic="coping strategies living with hs can be challenging, but healthy coping strategies can make a difference. stress management, mindfulness, physical activity, support groups, counseling, and connecting with others who understand hs can help improve emotional and physical well-being.">
+                            <h3>Coping Strategies</h3>
+                            <p>Living with HS can be challenging, but healthy coping strategies can make a difference. Stress management, mindfulness, physical activity, support groups, counseling, and connecting with others who understand HS can help improve emotional and physical well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-corticosteroids" data-topic-card data-topic="corticosteroids corticosteroids are medications used to reduce inflammation during hs flare-ups. they may be given as injections into painful lesions or prescribed as oral medications for short periods. because corticosteroids can have side effects, they should only be used under the guidance of a healthcare provider.">
+                            <h3>Corticosteroids</h3>
+                            <p>Corticosteroids are medications used to reduce inflammation during HS flare-ups. They may be given as injections into painful lesions or prescribed as oral medications for short periods. Because corticosteroids can have side effects, they should only be used under the guidance of a healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-counseling" data-topic-card data-topic="counseling living with a chronic condition like hs can affect your emotional health. counseling provides a safe space to talk about stress, anxiety, depression, relationships, body image, or other challenges. seeking support is a sign of strength and can be an important part of your overall care.">
+                            <h3>Counseling</h3>
+                            <p>Living with a chronic condition like HS can affect your emotional health. Counseling provides a safe space to talk about stress, anxiety, depression, relationships, body image, or other challenges. Seeking support is a sign of strength and can be an important part of your overall care.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-culture-and-wound-testing" data-topic-card data-topic="culture &amp; wound testing if a wound appears infected, your healthcare provider may collect a sample of drainage for laboratory testing. this helps identify whether bacteria are present and determines which antibiotics, if any, are most likely to be effective. not all draining hs wounds require a culture.">
+                            <h3>Culture &amp; Wound Testing</h3>
+                            <p>If a wound appears infected, your healthcare provider may collect a sample of drainage for laboratory testing. This helps identify whether bacteria are present and determines which antibiotics, if any, are most likely to be effective. Not all draining HS wounds require a culture.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-D" data-letter-section>
+                        <h2>D</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-daily-skin-care" data-topic-card data-topic="daily skin care a gentle skin care routine can help protect sensitive skin and reduce irritation. using mild cleansers, avoiding harsh scrubbing, wearing loose-fitting clothing, and following your healthcare provider&#x27;s recommendations may help support skin health and comfort.">
+                            <h3>Daily Skin Care</h3>
+                            <p>A gentle skin care routine can help protect sensitive skin and reduce irritation. Using mild cleansers, avoiding harsh scrubbing, wearing loose-fitting clothing, and following your healthcare provider&#x27;s recommendations may help support skin health and comfort.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-depression" data-topic-card data-topic="depression living with hs can affect emotional well-being and increase the risk of depression. feelings of sadness, hopelessness, or losing interest in activities you once enjoyed should never be ignored. if these feelings last for more than two weeks, talk with your healthcare provider or a mental health professional.">
+                            <h3>Depression</h3>
+                            <p>Living with HS can affect emotional well-being and increase the risk of depression. Feelings of sadness, hopelessness, or losing interest in activities you once enjoyed should never be ignored. If these feelings last for more than two weeks, talk with your healthcare provider or a mental health professional.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-dermatologist" data-topic-card data-topic="dermatologist a dermatologist is a physician who specializes in diagnosing and treating skin, hair, and nail conditions. because hs is a chronic inflammatory skin disease, working with a dermatologist experienced in treating hs can help you receive the most appropriate care.">
+                            <h3>Dermatologist</h3>
+                            <p>A dermatologist is a physician who specializes in diagnosing and treating skin, hair, and nail conditions. Because HS is a chronic inflammatory skin disease, working with a dermatologist experienced in treating HS can help you receive the most appropriate care.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-diagnosis" data-topic-card data-topic="diagnosis hs is usually diagnosed through a physical examination, medical history, and discussion of your symptoms. there is no single blood test that diagnoses hs. receiving an early diagnosis can help prevent disease progression and improve long-term outcomes.">
+                            <h3>Diagnosis</h3>
+                            <p>HS is usually diagnosed through a physical examination, medical history, and discussion of your symptoms. There is no single blood test that diagnoses HS. Receiving an early diagnosis can help prevent disease progression and improve long-term outcomes.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-drainage" data-topic-card data-topic="drainage many people with hs experience drainage from inflamed nodules, abscesses, or tunnels beneath the skin. managing drainage with appropriate dressings, good wound care, and guidance from your healthcare provider can help protect the skin and improve comfort.">
+                            <h3>Drainage</h3>
+                            <p>Many people with HS experience drainage from inflamed nodules, abscesses, or tunnels beneath the skin. Managing drainage with appropriate dressings, good wound care, and guidance from your healthcare provider can help protect the skin and improve comfort.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-dressings" data-topic-card data-topic="dressings dressings help absorb drainage, protect wounds, reduce friction, and support healing. there are many types of dressings available, and the best choice depends on the location and amount of drainage. your healthcare provider or wound care specialist can recommend products that work best for you.">
+                            <h3>Dressings</h3>
+                            <p>Dressings help absorb drainage, protect wounds, reduce friction, and support healing. There are many types of dressings available, and the best choice depends on the location and amount of drainage. Your healthcare provider or wound care specialist can recommend products that work best for you.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-E" data-letter-section>
+                        <h2>E</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-emergency-room-visits" data-topic-card data-topic="emergency room visits most hs flare-ups can be managed by your healthcare team, but severe pain, rapidly spreading infection, high fever, or other serious symptoms may require emergency medical care. if you are unsure, contact your healthcare provider or seek immediate medical attention.">
+                            <h3>Emergency Room Visits</h3>
+                            <p>Most HS flare-ups can be managed by your healthcare team, but severe pain, rapidly spreading infection, high fever, or other serious symptoms may require emergency medical care. If you are unsure, contact your healthcare provider or seek immediate medical attention.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-emotional-well-being" data-topic-card data-topic="emotional well-being hs affects more than your skin—it can affect your confidence, relationships, work, and overall quality of life. taking care of your emotional health through self-care, counseling, support groups, or trusted friends and family is an important part of managing hs.">
+                            <h3>Emotional Well-being</h3>
+                            <p>HS affects more than your skin—it can affect your confidence, relationships, work, and overall quality of life. Taking care of your emotional health through self-care, counseling, support groups, or trusted friends and family is an important part of managing HS.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-employment-and-workplace-rights" data-topic-card data-topic="employment &amp; workplace rights living with hs may affect your ability to work during painful flare-ups. depending on your situation, you may be entitled to workplace accommodations or legal protections. understanding your rights can help you continue working while managing your health.">
+                            <h3>Employment &amp; Workplace Rights</h3>
+                            <p>Living with HS may affect your ability to work during painful flare-ups. Depending on your situation, you may be entitled to workplace accommodations or legal protections. Understanding your rights can help you continue working while managing your health.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-endocrinologist" data-topic-card data-topic="endocrinologist an endocrinologist is a physician who specializes in hormones and metabolic conditions, such as diabetes and thyroid disorders. because hormones can influence hs symptoms, some people may benefit from seeing an endocrinologist as part of their healthcare team.">
+                            <h3>Endocrinologist</h3>
+                            <p>An endocrinologist is a physician who specializes in hormones and metabolic conditions, such as diabetes and thyroid disorders. Because hormones can influence HS symptoms, some people may benefit from seeing an endocrinologist as part of their healthcare team.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-exercise" data-topic-card data-topic="exercise regular physical activity supports overall health, reduces stress, and may improve energy and well-being. choose activities that are comfortable and minimize friction, such as walking, swimming, yoga, or cycling. talk with your healthcare provider before starting a new exercise program.">
+                            <h3>Exercise</h3>
+                            <p>Regular physical activity supports overall health, reduces stress, and may improve energy and well-being. Choose activities that are comfortable and minimize friction, such as walking, swimming, yoga, or cycling. Talk with your healthcare provider before starting a new exercise program.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-F" data-letter-section>
+                        <h2>F</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-family-support" data-topic-card data-topic="family support living with hs can affect the entire family. helping loved ones understand the condition can improve communication, reduce misunderstandings, and create a stronger support system during difficult times.">
+                            <h3>Family Support</h3>
+                            <p>Living with HS can affect the entire family. Helping loved ones understand the condition can improve communication, reduce misunderstandings, and create a stronger support system during difficult times.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-fatigue" data-topic-card data-topic="fatigue fatigue is more than feeling tired—it is an overwhelming lack of energy that can interfere with daily life. many people with hs experience fatigue due to chronic inflammation, pain, poor sleep, or other health conditions. talk with your healthcare provider if fatigue is affecting your quality of life.">
+                            <h3>Fatigue</h3>
+                            <p>Fatigue is more than feeling tired—it is an overwhelming lack of energy that can interfere with daily life. Many people with HS experience fatigue due to chronic inflammation, pain, poor sleep, or other health conditions. Talk with your healthcare provider if fatigue is affecting your quality of life.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-flare-ups" data-topic-card data-topic="flare-ups a flare-up is a period when hs symptoms suddenly worsen or new lesions develop. flare-ups may be triggered by factors such as stress, hormones, illness, friction, or other personal triggers. learning to recognize your triggers can help you better manage your condition.">
+                            <h3>Flare-Ups</h3>
+                            <p>A flare-up is a period when HS symptoms suddenly worsen or new lesions develop. Flare-ups may be triggered by factors such as stress, hormones, illness, friction, or other personal triggers. Learning to recognize your triggers can help you better manage your condition.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-fistulas" data-topic-card data-topic="fistulas a fistula is an abnormal connection between two parts of the body. although uncommon in hs, fistulas can develop in severe cases depending on the affected area. they require evaluation and treatment by a healthcare provider.">
+                            <h3>Fistulas</h3>
+                            <p>A fistula is an abnormal connection between two parts of the body. Although uncommon in HS, fistulas can develop in severe cases depending on the affected area. They require evaluation and treatment by a healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-friction" data-topic-card data-topic="friction friction occurs when skin repeatedly rubs against skin or clothing. because friction can irritate hs-prone areas, wearing loose-fitting clothing, reducing rubbing, and using protective dressings may help improve comfort.">
+                            <h3>Friction</h3>
+                            <p>Friction occurs when skin repeatedly rubs against skin or clothing. Because friction can irritate HS-prone areas, wearing loose-fitting clothing, reducing rubbing, and using protective dressings may help improve comfort.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-G" data-letter-section>
+                        <h2>G</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-genetics" data-topic-card data-topic="genetics researchers believe genetics may play a role in the development of hs. some people have family members with the condition, while others do not. having a family history of hs does not guarantee that someone will develop it.">
+                            <h3>Genetics</h3>
+                            <p>Researchers believe genetics may play a role in the development of HS. Some people have family members with the condition, while others do not. Having a family history of HS does not guarantee that someone will develop it.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-grief" data-topic-card data-topic="grief living with hs may involve grieving changes in your health, relationships, career, or lifestyle. these feelings are normal. giving yourself permission to grieve while seeking support can help you adjust and move forward.">
+                            <h3>Grief</h3>
+                            <p>Living with HS may involve grieving changes in your health, relationships, career, or lifestyle. These feelings are normal. Giving yourself permission to grieve while seeking support can help you adjust and move forward.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-grooming-and-hair-removal" data-topic-card data-topic="grooming &amp; hair removal shaving and certain hair removal methods may irritate sensitive skin or trigger flare-ups for some people with hs. gentle grooming techniques and discussing options such as laser hair removal with your healthcare provider may help reduce irritation.">
+                            <h3>Grooming &amp; Hair Removal</h3>
+                            <p>Shaving and certain hair removal methods may irritate sensitive skin or trigger flare-ups for some people with HS. Gentle grooming techniques and discussing options such as laser hair removal with your healthcare provider may help reduce irritation.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-H" data-letter-section>
+                        <h2>H</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-health-insurance" data-topic-card data-topic="health insurance health insurance helps cover the cost of medical care, medications, procedures, and other healthcare services. understanding your insurance benefits can help you access the treatments and specialists you need. if coverage is denied, you have the right to ask questions and file an appeal.">
+                            <h3>Health Insurance</h3>
+                            <p>Health insurance helps cover the cost of medical care, medications, procedures, and other healthcare services. Understanding your insurance benefits can help you access the treatments and specialists you need. If coverage is denied, you have the right to ask questions and file an appeal.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-healthy-sleep" data-topic-card data-topic="healthy sleep getting enough quality sleep is an important part of overall health. pain, drainage, itching, and stress from hs can make sleeping difficult. creating a bedtime routine and working with your healthcare provider to manage symptoms may help improve your sleep.">
+                            <h3>Healthy Sleep</h3>
+                            <p>Getting enough quality sleep is an important part of overall health. Pain, drainage, itching, and stress from HS can make sleeping difficult. Creating a bedtime routine and working with your healthcare provider to manage symptoms may help improve your sleep.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-hidradenitis-suppurativa-hs" data-topic-card data-topic="hidradenitis suppurativa (hs) hidradenitis suppurativa (hs) is a chronic inflammatory skin disease that causes painful nodules, abscesses, tunnels (sinus tracts), and scarring. it most often affects areas where skin rubs together, such as the underarms, groin, buttocks, breasts, and inner thighs. although there is no cure, treatments and lifestyle strategies can help manage symptoms and improve quality of life.">
+                            <h3>Hidradenitis Suppurativa (HS)</h3>
+                            <p>Hidradenitis suppurativa (HS) is a chronic inflammatory skin disease that causes painful nodules, abscesses, tunnels (sinus tracts), and scarring. It most often affects areas where skin rubs together, such as the underarms, groin, buttocks, breasts, and inner thighs. Although there is no cure, treatments and lifestyle strategies can help manage symptoms and improve quality of life.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-high-frequency-ultrasound" data-topic-card data-topic="high-frequency ultrasound high-frequency ultrasound is a specialized imaging tool that allows healthcare providers to see beneath the surface of the skin. it can help identify tunnels, inflammation, and the extent of hs that may not be visible during a physical examination. this information can support diagnosis and treatment planning.">
+                            <h3>High-Frequency Ultrasound</h3>
+                            <p>High-frequency ultrasound is a specialized imaging tool that allows healthcare providers to see beneath the surface of the skin. It can help identify tunnels, inflammation, and the extent of HS that may not be visible during a physical examination. This information can support diagnosis and treatment planning.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-hormones" data-topic-card data-topic="hormones hormones may influence hs symptoms in some people. many individuals notice flare-ups around menstruation, pregnancy, or menopause. if hormonal changes appear to affect your hs, your healthcare provider can discuss treatment options that may help.">
+                            <h3>Hormones</h3>
+                            <p>Hormones may influence HS symptoms in some people. Many individuals notice flare-ups around menstruation, pregnancy, or menopause. If hormonal changes appear to affect your HS, your healthcare provider can discuss treatment options that may help.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-hs-awareness-week" data-topic-card data-topic="hs awareness week hs awareness week is an annual opportunity to educate the public, reduce stigma, and increase understanding of hidradenitis suppurativa. it encourages people to learn about hs, share their stories, advocate for better care, and support those living with the condition. together, we can help improve awareness, promote earlier diagnosis, and strengthen the hs community.">
+                            <h3>HS Awareness Week</h3>
+                            <p>HS Awareness Week is an annual opportunity to educate the public, reduce stigma, and increase understanding of hidradenitis suppurativa. It encourages people to learn about HS, share their stories, advocate for better care, and support those living with the condition. Together, we can help improve awareness, promote earlier diagnosis, and strengthen the HS community.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-hygiene" data-topic-card data-topic="hygiene hs is not caused by poor hygiene. gentle cleansing with mild, fragrance-free products can help keep the skin clean without causing additional irritation. avoid harsh scrubbing, which may worsen sensitive skin.">
+                            <h3>Hygiene</h3>
+                            <p>HS is not caused by poor hygiene. Gentle cleansing with mild, fragrance-free products can help keep the skin clean without causing additional irritation. Avoid harsh scrubbing, which may worsen sensitive skin.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-I" data-letter-section>
+                        <h2>I</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-incision-and-drainage" data-topic-card data-topic="incision &amp; drainage incision and drainage is a procedure used to release fluid and relieve pressure from a painful abscess. while it may provide temporary relief, it does not treat the underlying cause of hs. your healthcare provider can recommend treatment options that help manage the disease over the long term.">
+                            <h3>Incision &amp; Drainage</h3>
+                            <p>Incision and drainage is a procedure used to release fluid and relieve pressure from a painful abscess. While it may provide temporary relief, it does not treat the underlying cause of HS. Your healthcare provider can recommend treatment options that help manage the disease over the long term.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-infection" data-topic-card data-topic="infection hs is not an infection, but open wounds can sometimes become infected. signs of infection may include increasing redness, warmth, swelling, fever, worsening pain, or foul-smelling drainage. contact your healthcare provider if you think you may have an infection.">
+                            <h3>Infection</h3>
+                            <p>HS is not an infection, but open wounds can sometimes become infected. Signs of infection may include increasing redness, warmth, swelling, fever, worsening pain, or foul-smelling drainage. Contact your healthcare provider if you think you may have an infection.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-inflammation" data-topic-card data-topic="inflammation inflammation is the body&#x27;s natural response to injury or illness. in hs, the immune system becomes overactive, causing ongoing inflammation that leads to painful nodules, abscesses, and tunnels beneath the skin. many hs treatments focus on reducing inflammation.">
+                            <h3>Inflammation</h3>
+                            <p>Inflammation is the body&#x27;s natural response to injury or illness. In HS, the immune system becomes overactive, causing ongoing inflammation that leads to painful nodules, abscesses, and tunnels beneath the skin. Many HS treatments focus on reducing inflammation.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-integrative-medicine" data-topic-card data-topic="integrative medicine integrative medicine combines conventional medical care with evidence-based complementary approaches, such as nutrition, mindfulness, stress management, and physical activity. these approaches may help support overall health but should not replace your prescribed hs treatment plan.">
+                            <h3>Integrative Medicine</h3>
+                            <p>Integrative medicine combines conventional medical care with evidence-based complementary approaches, such as nutrition, mindfulness, stress management, and physical activity. These approaches may help support overall health but should not replace your prescribed HS treatment plan.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-insurance-appeals" data-topic-card data-topic="insurance appeals if your insurance company denies coverage for a medication, procedure, or treatment, you have the right to appeal the decision. your healthcare provider can often provide supporting documentation to help explain why the treatment is medically necessary.">
+                            <h3>Insurance Appeals</h3>
+                            <p>If your insurance company denies coverage for a medication, procedure, or treatment, you have the right to appeal the decision. Your healthcare provider can often provide supporting documentation to help explain why the treatment is medically necessary.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-J" data-letter-section>
+                        <h2>J</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-journaling" data-topic-card data-topic="journaling keeping a journal can help you track flare-ups, symptoms, pain levels, medications, food, stress, and other possible triggers. journaling may help you recognize patterns and provide valuable information during healthcare appointments.">
+                            <h3>Journaling</h3>
+                            <p>Keeping a journal can help you track flare-ups, symptoms, pain levels, medications, food, stress, and other possible triggers. Journaling may help you recognize patterns and provide valuable information during healthcare appointments.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-joint-pain" data-topic-card data-topic="joint pain some people with hs experience joint pain or stiffness, which may be related to inflammation or another medical condition. if joint pain is persistent or severe, discuss it with your healthcare provider for further evaluation.">
+                            <h3>Joint Pain</h3>
+                            <p>Some people with HS experience joint pain or stiffness, which may be related to inflammation or another medical condition. If joint pain is persistent or severe, discuss it with your healthcare provider for further evaluation.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-K" data-letter-section>
+                        <h2>K</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-keloids" data-topic-card data-topic="keloids keloids are raised, thick scars that grow beyond the original wound after the skin heals. some people with hs may develop keloids following repeated inflammation or surgery. treatment options are available and should be discussed with your healthcare provider.">
+                            <h3>Keloids</h3>
+                            <p>Keloids are raised, thick scars that grow beyond the original wound after the skin heals. Some people with HS may develop keloids following repeated inflammation or surgery. Treatment options are available and should be discussed with your healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-ketogenic-diet-what-we-know" data-topic-card data-topic="ketogenic diet (what we know) the ketogenic (keto) diet is a low-carbohydrate, high-fat eating plan. while some people with hs report improvement in their symptoms, research is still limited. talk with your healthcare provider or a registered dietitian before making significant dietary changes.">
+                            <h3>Ketogenic Diet (What We Know)</h3>
+                            <p>The ketogenic (keto) diet is a low-carbohydrate, high-fat eating plan. While some people with HS report improvement in their symptoms, research is still limited. Talk with your healthcare provider or a registered dietitian before making significant dietary changes.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-L" data-letter-section>
+                        <h2>L</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-laser-hair-removal" data-topic-card data-topic="laser hair removal laser hair removal may help reduce flare-ups in some people with mild to moderate hs by decreasing hair follicles and irritation. it is not appropriate for everyone, so discuss the benefits and risks with your dermatologist.">
+                            <h3>Laser Hair Removal</h3>
+                            <p>Laser hair removal may help reduce flare-ups in some people with mild to moderate HS by decreasing hair follicles and irritation. It is not appropriate for everyone, so discuss the benefits and risks with your dermatologist.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-lifestyle-changes" data-topic-card data-topic="lifestyle changes healthy lifestyle habits, such as eating a balanced diet, staying active, managing stress, getting enough sleep, and avoiding smoking, may help improve overall health and support hs management. small, consistent changes can make a meaningful difference over time.">
+                            <h3>Lifestyle Changes</h3>
+                            <p>Healthy lifestyle habits, such as eating a balanced diet, staying active, managing stress, getting enough sleep, and avoiding smoking, may help improve overall health and support HS management. Small, consistent changes can make a meaningful difference over time.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-lymphedema" data-topic-card data-topic="lymphedema lymphedema is swelling caused by a buildup of lymph fluid. in severe or long-standing hs, chronic inflammation and scarring may block normal lymph flow, leading to swelling in the affected area. early treatment can help manage symptoms and prevent complications.">
+                            <h3>Lymphedema</h3>
+                            <p>Lymphedema is swelling caused by a buildup of lymph fluid. In severe or long-standing HS, chronic inflammation and scarring may block normal lymph flow, leading to swelling in the affected area. Early treatment can help manage symptoms and prevent complications.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-M" data-letter-section>
+                        <h2>M</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-medications" data-topic-card data-topic="medications several medications are available to help manage hs, including topical treatments, oral antibiotics, biologics, hormone therapies, and other anti-inflammatory medications. your healthcare provider will recommend a treatment plan based on the severity of your hs and your individual needs.">
+                            <h3>Medications</h3>
+                            <p>Several medications are available to help manage HS, including topical treatments, oral antibiotics, biologics, hormone therapies, and other anti-inflammatory medications. Your healthcare provider will recommend a treatment plan based on the severity of your HS and your individual needs.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-menopause" data-topic-card data-topic="menopause hormonal changes during menopause may affect hs symptoms differently from person to person. some people notice improvement, while others continue to experience flare-ups. discuss any changes in your symptoms with your healthcare provider.">
+                            <h3>Menopause</h3>
+                            <p>Hormonal changes during menopause may affect HS symptoms differently from person to person. Some people notice improvement, while others continue to experience flare-ups. Discuss any changes in your symptoms with your healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-menstruation" data-topic-card data-topic="menstruation many people with hs notice that their symptoms worsen before or during their menstrual cycle due to hormonal changes. tracking your symptoms can help you identify patterns and discuss treatment options with your healthcare provider.">
+                            <h3>Menstruation</h3>
+                            <p>Many people with HS notice that their symptoms worsen before or during their menstrual cycle due to hormonal changes. Tracking your symptoms can help you identify patterns and discuss treatment options with your healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-mental-health" data-topic-card data-topic="mental health living with hs can affect emotional well-being, relationships, self-esteem, and quality of life. anxiety, depression, stress, and social isolation are common but treatable. caring for your mental health is an important part of managing hs.">
+                            <h3>Mental Health</h3>
+                            <p>Living with HS can affect emotional well-being, relationships, self-esteem, and quality of life. Anxiety, depression, stress, and social isolation are common but treatable. Caring for your mental health is an important part of managing HS.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-mindfulness" data-topic-card data-topic="mindfulness mindfulness is the practice of focusing on the present moment without judgment. techniques such as deep breathing, meditation, and body awareness may help reduce stress, improve emotional well-being, and support coping with chronic pain.">
+                            <h3>Mindfulness</h3>
+                            <p>Mindfulness is the practice of focusing on the present moment without judgment. Techniques such as deep breathing, meditation, and body awareness may help reduce stress, improve emotional well-being, and support coping with chronic pain.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-mobility" data-topic-card data-topic="mobility pain, swelling, tunnels, and scarring can make walking, sitting, exercising, or performing daily activities more difficult. working with your healthcare team to manage symptoms and improve mobility can help maintain independence and quality of life.">
+                            <h3>Mobility</h3>
+                            <p>Pain, swelling, tunnels, and scarring can make walking, sitting, exercising, or performing daily activities more difficult. Working with your healthcare team to manage symptoms and improve mobility can help maintain independence and quality of life.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-N" data-letter-section>
+                        <h2>N</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-nicotine-and-smoking" data-topic-card data-topic="nicotine &amp; smoking research shows that smoking and nicotine use are associated with more severe hs in many people. quitting smoking may help improve overall health and may reduce the frequency or severity of flare-ups. if you need help quitting, talk with your healthcare provider about available resources.">
+                            <h3>Nicotine &amp; Smoking</h3>
+                            <p>Research shows that smoking and nicotine use are associated with more severe HS in many people. Quitting smoking may help improve overall health and may reduce the frequency or severity of flare-ups. If you need help quitting, talk with your healthcare provider about available resources.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-nightshade-foods" data-topic-card data-topic="nightshade foods nightshade vegetables include tomatoes, potatoes, peppers, and eggplant. some people with hs report that avoiding these foods improves their symptoms, while others notice no difference. research is limited, so keeping a food journal may help you determine whether these foods affect your hs.">
+                            <h3>Nightshade Foods</h3>
+                            <p>Nightshade vegetables include tomatoes, potatoes, peppers, and eggplant. Some people with HS report that avoiding these foods improves their symptoms, while others notice no difference. Research is limited, so keeping a food journal may help you determine whether these foods affect your HS.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-nutrition" data-topic-card data-topic="nutrition good nutrition supports your overall health and may help reduce inflammation. although there is no single diet that works for everyone with hs, eating a balanced diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats can support your well-being.">
+                            <h3>Nutrition</h3>
+                            <p>Good nutrition supports your overall health and may help reduce inflammation. Although there is no single diet that works for everyone with HS, eating a balanced diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats can support your well-being.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-O" data-letter-section>
+                        <h2>O</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-obesity" data-topic-card data-topic="obesity obesity is one of several factors that may be associated with hs, but it does not cause the disease. maintaining a healthy weight may help reduce friction, decrease inflammation, and improve mobility for some people. every person&#x27;s hs journey is different, and treatment should always be individualized.">
+                            <h3>Obesity</h3>
+                            <p>Obesity is one of several factors that may be associated with HS, but it does not cause the disease. Maintaining a healthy weight may help reduce friction, decrease inflammation, and improve mobility for some people. Every person&#x27;s HS journey is different, and treatment should always be individualized.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-occupational-therapy" data-topic-card data-topic="occupational therapy occupational therapists help people perform everyday activities more comfortably and independently. they may recommend strategies, adaptive equipment, or techniques to reduce pain and improve daily functioning while living with hs.">
+                            <h3>Occupational Therapy</h3>
+                            <p>Occupational therapists help people perform everyday activities more comfortably and independently. They may recommend strategies, adaptive equipment, or techniques to reduce pain and improve daily functioning while living with HS.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-odor-management" data-topic-card data-topic="odor management drainage from hs wounds can sometimes produce an unpleasant odor, which may affect confidence and quality of life. proper wound care, absorbent dressings, gentle cleansing, and managing flare-ups can help reduce odor. talk with your healthcare provider if odor changes suddenly or becomes severe.">
+                            <h3>Odor Management</h3>
+                            <p>Drainage from HS wounds can sometimes produce an unpleasant odor, which may affect confidence and quality of life. Proper wound care, absorbent dressings, gentle cleansing, and managing flare-ups can help reduce odor. Talk with your healthcare provider if odor changes suddenly or becomes severe.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-oral-antibiotics" data-topic-card data-topic="oral antibiotics oral antibiotics are commonly prescribed to reduce inflammation and treat bacterial infections when they occur. depending on your treatment plan, they may be used for short periods or longer-term management. always take antibiotics exactly as prescribed.">
+                            <h3>Oral Antibiotics</h3>
+                            <p>Oral antibiotics are commonly prescribed to reduce inflammation and treat bacterial infections when they occur. Depending on your treatment plan, they may be used for short periods or longer-term management. Always take antibiotics exactly as prescribed.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-P" data-letter-section>
+                        <h2>P</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-pain-management" data-topic-card data-topic="pain management pain is one of the most common symptoms of hs and can affect daily life, sleep, and emotional well-being. pain management may include medications, warm compresses, stress management, physical therapy, or other treatments recommended by your healthcare provider.">
+                            <h3>Pain Management</h3>
+                            <p>Pain is one of the most common symptoms of HS and can affect daily life, sleep, and emotional well-being. Pain management may include medications, warm compresses, stress management, physical therapy, or other treatments recommended by your healthcare provider.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-papaya-app" data-topic-card data-topic="papaya app the papaya app is a digital health tool designed to help people organize and manage their healthcare information. it can help you prepare for appointments, keep track of medical records, document symptoms, and become a more informed partner in your care. iahsn recommends the papaya app as a helpful tool for staying organized throughout your hs journey.">
+                            <h3>Papaya App</h3>
+                            <p>The Papaya App is a digital health tool designed to help people organize and manage their healthcare information. It can help you prepare for appointments, keep track of medical records, document symptoms, and become a more informed partner in your care. IAHSN recommends the Papaya App as a helpful tool for staying organized throughout your HS journey.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-patient-advocacy" data-topic-card data-topic="patient advocacy patient advocacy means taking an active role in your healthcare by asking questions, sharing your concerns, and making informed decisions with your healthcare team. you can also advocate for better awareness, research, and access to care within the hs community.">
+                            <h3>Patient Advocacy</h3>
+                            <p>Patient advocacy means taking an active role in your healthcare by asking questions, sharing your concerns, and making informed decisions with your healthcare team. You can also advocate for better awareness, research, and access to care within the HS community.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-pregnancy" data-topic-card data-topic="pregnancy pregnancy may affect hs differently for each person. some individuals experience fewer flare-ups, while others notice worsening symptoms. if you are pregnant or planning a pregnancy, work closely with your healthcare providers to develop a safe treatment plan.">
+                            <h3>Pregnancy</h3>
+                            <p>Pregnancy may affect HS differently for each person. Some individuals experience fewer flare-ups, while others notice worsening symptoms. If you are pregnant or planning a pregnancy, work closely with your healthcare providers to develop a safe treatment plan.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-primary-care-provider" data-topic-card data-topic="primary care provider your primary care provider (pcp) plays an important role in your overall health. they can help coordinate your care, manage other health conditions, and refer you to specialists such as dermatologists, surgeons, or mental health professionals when needed.">
+                            <h3>Primary Care Provider</h3>
+                            <p>Your primary care provider (PCP) plays an important role in your overall health. They can help coordinate your care, manage other health conditions, and refer you to specialists such as dermatologists, surgeons, or mental health professionals when needed.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-psoriasis-hs-connection" data-topic-card data-topic="psoriasis (hs connection) some people with hs also have psoriasis, another chronic inflammatory skin condition. because both diseases involve the immune system, your healthcare provider may consider treatments that help manage both conditions.">
+                            <h3>Psoriasis (HS Connection)</h3>
+                            <p>Some people with HS also have psoriasis, another chronic inflammatory skin condition. Because both diseases involve the immune system, your healthcare provider may consider treatments that help manage both conditions.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-Q" data-letter-section>
+                        <h2>Q</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-quality-of-life" data-topic-card data-topic="quality of life hs can affect many areas of life, including work, relationships, sleep, physical activity, and emotional health. improving quality of life involves managing symptoms, building a strong support system, and finding treatments that help you live well despite the challenges of hs.">
+                            <h3>Quality of Life</h3>
+                            <p>HS can affect many areas of life, including work, relationships, sleep, physical activity, and emotional health. Improving quality of life involves managing symptoms, building a strong support system, and finding treatments that help you live well despite the challenges of HS.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-questions-to-ask-your-healthcare-provider" data-topic-card data-topic="questions to ask your healthcare provider preparing questions before your appointment can help you make the most of your visit. ask about your diagnosis, treatment options, medications, wound care, lifestyle changes, and what to expect as you manage hs.">
+                            <h3>Questions to Ask Your Healthcare Provider</h3>
+                            <p>Preparing questions before your appointment can help you make the most of your visit. Ask about your diagnosis, treatment options, medications, wound care, lifestyle changes, and what to expect as you manage HS.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-R" data-letter-section>
+                        <h2>R</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-relationships" data-topic-card data-topic="relationships hs can affect relationships with partners, family members, friends, and coworkers. open communication, education, and emotional support can help strengthen relationships and reduce feelings of isolation.">
+                            <h3>Relationships</h3>
+                            <p>HS can affect relationships with partners, family members, friends, and coworkers. Open communication, education, and emotional support can help strengthen relationships and reduce feelings of isolation.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-remission" data-topic-card data-topic="remission remission means that hs symptoms improve significantly or become inactive for a period of time. although hs is a chronic condition, many people achieve remission with appropriate treatment and ongoing management.">
+                            <h3>Remission</h3>
+                            <p>Remission means that HS symptoms improve significantly or become inactive for a period of time. Although HS is a chronic condition, many people achieve remission with appropriate treatment and ongoing management.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-resilience" data-topic-card data-topic="resilience living with hs requires resilience—the ability to adapt, recover, and move forward despite challenges. building resilience through self-care, support, education, and healthy coping strategies can improve both emotional and physical well-being.">
+                            <h3>Resilience</h3>
+                            <p>Living with HS requires resilience—the ability to adapt, recover, and move forward despite challenges. Building resilience through self-care, support, education, and healthy coping strategies can improve both emotional and physical well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-research" data-topic-card data-topic="research hs research continues to improve our understanding of the disease and identify new treatment options. participating in research studies or learning about current discoveries helps advance care for the entire hs community.">
+                            <h3>Research</h3>
+                            <p>HS research continues to improve our understanding of the disease and identify new treatment options. Participating in research studies or learning about current discoveries helps advance care for the entire HS community.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-S" data-letter-section>
+                        <h2>S</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-scarring" data-topic-card data-topic="scarring repeated inflammation and healing can lead to permanent scarring. early diagnosis and treatment may help reduce the risk of severe scarring and preserve healthy skin.">
+                            <h3>Scarring</h3>
+                            <p>Repeated inflammation and healing can lead to permanent scarring. Early diagnosis and treatment may help reduce the risk of severe scarring and preserve healthy skin.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-self-care" data-topic-card data-topic="self-care self-care includes the daily habits that support your physical and emotional well-being. this may include following your treatment plan, eating well, staying active, managing stress, getting enough sleep, and asking for help when you need it.">
+                            <h3>Self-Care</h3>
+                            <p>Self-care includes the daily habits that support your physical and emotional well-being. This may include following your treatment plan, eating well, staying active, managing stress, getting enough sleep, and asking for help when you need it.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-shared-decision-making" data-topic-card data-topic="shared decision-making shared decision-making is a partnership between you and your healthcare provider. together, you discuss treatment options, consider your personal preferences and goals, and make decisions that are best for your health and lifestyle.">
+                            <h3>Shared Decision-Making</h3>
+                            <p>Shared decision-making is a partnership between you and your healthcare provider. Together, you discuss treatment options, consider your personal preferences and goals, and make decisions that are best for your health and lifestyle.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-smoking-and-hs" data-topic-card data-topic="smoking &amp; hs smoking has been linked to increased inflammation and more severe hs in many people. quitting smoking may improve your overall health and could reduce disease activity. if you are ready to quit, your healthcare provider can connect you with helpful resources and support.">
+                            <h3>Smoking &amp; HS</h3>
+                            <p>Smoking has been linked to increased inflammation and more severe HS in many people. Quitting smoking may improve your overall health and could reduce disease activity. If you are ready to quit, your healthcare provider can connect you with helpful resources and support.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-stress" data-topic-card data-topic="stress stress does not cause hs, but it may contribute to flare-ups in some people. learning healthy ways to manage stress—such as mindfulness, exercise, counseling, or relaxation techniques—can support your overall well-being.">
+                            <h3>Stress</h3>
+                            <p>Stress does not cause HS, but it may contribute to flare-ups in some people. Learning healthy ways to manage stress—such as mindfulness, exercise, counseling, or relaxation techniques—can support your overall well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-support-groups" data-topic-card data-topic="support groups support groups connect people living with hs who understand the challenges of the condition. sharing experiences, learning from others, and receiving encouragement can reduce isolation and improve emotional well-being.">
+                            <h3>Support Groups</h3>
+                            <p>Support groups connect people living with HS who understand the challenges of the condition. Sharing experiences, learning from others, and receiving encouragement can reduce isolation and improve emotional well-being.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-surgery" data-topic-card data-topic="surgery surgery may be recommended for people with persistent or severe hs that has not responded to other treatments. surgical options vary depending on the location and severity of the disease, and your healthcare provider can help determine the best approach for your situation.">
+                            <h3>Surgery</h3>
+                            <p>Surgery may be recommended for people with persistent or severe HS that has not responded to other treatments. Surgical options vary depending on the location and severity of the disease, and your healthcare provider can help determine the best approach for your situation.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-T" data-letter-section>
+                        <h2>T</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-telehealth" data-topic-card data-topic="telehealth telehealth allows you to meet with your healthcare provider through a secure video or phone appointment. it can be a convenient option for follow-up visits, medication management, and discussing concerns without traveling to the office.">
+                            <h3>Telehealth</h3>
+                            <p>Telehealth allows you to meet with your healthcare provider through a secure video or phone appointment. It can be a convenient option for follow-up visits, medication management, and discussing concerns without traveling to the office.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-therapists" data-topic-card data-topic="therapists living with hs can affect your emotional health as much as your physical health. therapists provide support for managing anxiety, depression, stress, body image concerns, relationships, and the emotional challenges of living with a chronic condition.">
+                            <h3>Therapists</h3>
+                            <p>Living with HS can affect your emotional health as much as your physical health. Therapists provide support for managing anxiety, depression, stress, body image concerns, relationships, and the emotional challenges of living with a chronic condition.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-triggers" data-topic-card data-topic="triggers hs triggers are factors that may cause or worsen flare-ups. common triggers include stress, hormonal changes, friction, heat, smoking, and, for some people, certain foods. learning your personal triggers can help you better manage your condition.">
+                            <h3>Triggers</h3>
+                            <p>HS triggers are factors that may cause or worsen flare-ups. Common triggers include stress, hormonal changes, friction, heat, smoking, and, for some people, certain foods. Learning your personal triggers can help you better manage your condition.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-tunnel-formation-sinus-tracts" data-topic-card data-topic="tunnel formation (sinus tracts) tunnel formation, also called sinus tracts, occurs when chronic inflammation creates channels beneath the skin. these tunnels can cause pain, drainage, and recurrent infections. early treatment may help reduce disease progression and prevent additional tunnel formation.">
+                            <h3>Tunnel Formation (Sinus Tracts)</h3>
+                            <p>Tunnel formation, also called sinus tracts, occurs when chronic inflammation creates channels beneath the skin. These tunnels can cause pain, drainage, and recurrent infections. Early treatment may help reduce disease progression and prevent additional tunnel formation.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-U" data-letter-section>
+                        <h2>U</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-ultrasound" data-topic-card data-topic="ultrasound ultrasound, especially high-frequency ultrasound, is a noninvasive imaging test that allows healthcare providers to see beneath the skin. it can help identify inflammation, tunnels (sinus tracts), and the extent of hs that may not be visible during a physical examination.">
+                            <h3>Ultrasound</h3>
+                            <p>Ultrasound, especially high-frequency ultrasound, is a noninvasive imaging test that allows healthcare providers to see beneath the skin. It can help identify inflammation, tunnels (sinus tracts), and the extent of HS that may not be visible during a physical examination.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-understanding-your-lab-results" data-topic-card data-topic="understanding your lab results laboratory tests do not diagnose hs, but they may help evaluate infection, inflammation, or other health conditions related to your symptoms. if you have questions about your results, ask your healthcare provider to explain what they mean and how they relate to your care.">
+                            <h3>Understanding Your Lab Results</h3>
+                            <p>Laboratory tests do not diagnose HS, but they may help evaluate infection, inflammation, or other health conditions related to your symptoms. If you have questions about your results, ask your healthcare provider to explain what they mean and how they relate to your care.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-urgent-care" data-topic-card data-topic="urgent care urgent care centers can treat certain non-life-threatening medical concerns, such as painful flare-ups or possible skin infections. however, ongoing hs management is best coordinated with your dermatologist or primary care provider whenever possible.">
+                            <h3>Urgent Care</h3>
+                            <p>Urgent care centers can treat certain non-life-threatening medical concerns, such as painful flare-ups or possible skin infections. However, ongoing HS management is best coordinated with your dermatologist or primary care provider whenever possible.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-V" data-letter-section>
+                        <h2>V</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-vitamins-and-supplements" data-topic-card data-topic="vitamins &amp; supplements some people with hs use vitamins or dietary supplements to support their overall health. although research is ongoing, supplements such as zinc or vitamin d may be recommended in certain situations. always talk with your healthcare provider before starting any supplement.">
+                            <h3>Vitamins &amp; Supplements</h3>
+                            <p>Some people with HS use vitamins or dietary supplements to support their overall health. Although research is ongoing, supplements such as zinc or vitamin D may be recommended in certain situations. Always talk with your healthcare provider before starting any supplement.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-vulvar-hs" data-topic-card data-topic="vulvar hs vulvar hs affects the vulva and surrounding genital area. symptoms may include painful nodules, abscesses, drainage, and scarring. because symptoms can be mistaken for other conditions, an accurate diagnosis by an experienced healthcare provider is important.">
+                            <h3>Vulvar HS</h3>
+                            <p>Vulvar HS affects the vulva and surrounding genital area. Symptoms may include painful nodules, abscesses, drainage, and scarring. Because symptoms can be mistaken for other conditions, an accurate diagnosis by an experienced healthcare provider is important.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-W" data-letter-section>
+                        <h2>W</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-weight-management" data-topic-card data-topic="weight management maintaining a healthy weight may help reduce friction, improve mobility, and support overall health. while weight loss is not a cure for hs, healthy lifestyle habits may improve symptoms for some people. work with your healthcare team to develop realistic, individualized goals.">
+                            <h3>Weight Management</h3>
+                            <p>Maintaining a healthy weight may help reduce friction, improve mobility, and support overall health. While weight loss is not a cure for HS, healthy lifestyle habits may improve symptoms for some people. Work with your healthcare team to develop realistic, individualized goals.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-women-s-health" data-topic-card data-topic="women&#x27;s health hs can affect many aspects of women&#x27;s health, including menstruation, pregnancy, menopause, sexual health, and hormonal changes. discuss any concerns with your healthcare provider to ensure your care plan meets your individual needs.">
+                            <h3>Women&#x27;s Health</h3>
+                            <p>HS can affect many aspects of women&#x27;s health, including menstruation, pregnancy, menopause, sexual health, and hormonal changes. Discuss any concerns with your healthcare provider to ensure your care plan meets your individual needs.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-work-and-disability" data-topic-card data-topic="work &amp; disability hs can affect your ability to work because of pain, fatigue, drainage, or limited mobility. some individuals may benefit from workplace accommodations or disability benefits. understanding your options can help you continue working or access the support you need.">
+                            <h3>Work &amp; Disability</h3>
+                            <p>HS can affect your ability to work because of pain, fatigue, drainage, or limited mobility. Some individuals may benefit from workplace accommodations or disability benefits. Understanding your options can help you continue working or access the support you need.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-wound-care" data-topic-card data-topic="wound care proper wound care helps protect the skin, absorb drainage, reduce irritation, and lower the risk of infection. your healthcare provider or wound care specialist can recommend dressings and skin care products that best meet your needs.">
+                            <h3>Wound Care</h3>
+                            <p>Proper wound care helps protect the skin, absorb drainage, reduce irritation, and lower the risk of infection. Your healthcare provider or wound care specialist can recommend dressings and skin care products that best meet your needs.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-X" data-letter-section>
+                        <h2>X</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-x-ray-when-it-may-be-used" data-topic-card data-topic="x-ray (when it may be used) x-rays are not commonly used to diagnose hs. however, your healthcare provider may order an x-ray if they suspect a bone or joint problem or need to rule out another condition causing your symptoms.">
+                            <h3>X-ray (When It May Be Used)</h3>
+                            <p>X-rays are not commonly used to diagnose HS. However, your healthcare provider may order an X-ray if they suspect a bone or joint problem or need to rule out another condition causing your symptoms.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-Y" data-letter-section>
+                        <h2>Y</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-yoga" data-topic-card data-topic="yoga yoga combines gentle movement, stretching, breathing, and relaxation techniques that may help improve flexibility, reduce stress, and support emotional well-being. choose movements that are comfortable and avoid positions that increase friction or pain during flare-ups.">
+                            <h3>Yoga</h3>
+                            <p>Yoga combines gentle movement, stretching, breathing, and relaxation techniques that may help improve flexibility, reduce stress, and support emotional well-being. Choose movements that are comfortable and avoid positions that increase friction or pain during flare-ups.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-your-hs-action-plan" data-topic-card data-topic="your hs action plan an hs action plan is a personalized guide that helps you manage your condition. it may include your medications, wound care routine, lifestyle goals, symptom tracking, flare-up strategies, emergency contacts, and questions for your healthcare provider. having a plan can help you feel more prepared and confident in managing your hs.">
+                            <h3>Your HS Action Plan</h3>
+                            <p>An HS Action Plan is a personalized guide that helps you manage your condition. It may include your medications, wound care routine, lifestyle goals, symptom tracking, flare-up strategies, emergency contacts, and questions for your healthcare provider. Having a plan can help you feel more prepared and confident in managing your HS.</p>
+                        </article>
+                        </div>
+                    </section>
+                    <section class="az-letter-section" id="letter-Z" data-letter-section>
+                        <h2>Z</h2>
+                        <div class="az-topic-grid">
+                        <article class="az-topic-card" id="topic-zetuvit-dressings" data-topic-card data-topic="zetuvit dressings zetuvit® dressings are highly absorbent wound dressings commonly used by people with hs to manage moderate to heavy drainage. they help protect the skin, reduce leakage, and improve comfort during daily activities. your healthcare provider or wound care specialist can recommend the most appropriate dressing for your needs.">
+                            <h3>Zetuvit Dressings</h3>
+                            <p>Zetuvit® dressings are highly absorbent wound dressings commonly used by people with HS to manage moderate to heavy drainage. They help protect the skin, reduce leakage, and improve comfort during daily activities. Your healthcare provider or wound care specialist can recommend the most appropriate dressing for your needs.</p>
+                        </article>
+                        <article class="az-topic-card" id="topic-zinc" data-topic-card data-topic="zinc zinc is an essential mineral that supports the immune system and wound healing. some studies suggest that zinc supplements may help reduce inflammation in certain people with hs, but research is still ongoing. always talk with your healthcare provider before taking zinc or any dietary supplement.">
+                            <h3>Zinc</h3>
+                            <p>Zinc is an essential mineral that supports the immune system and wound healing. Some studies suggest that zinc supplements may help reduce inflammation in certain people with HS, but research is still ongoing. Always talk with your healthcare provider before taking zinc or any dietary supplement.</p>
+                        </article>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+        <section class="sponsors-band" aria-label="Sponsors">
+            <div class="sponsors-band-inner">
+                <div class="sponsors-logo-row">
+                    <img src="../Sponsors%20images/HS%20Foundation%20Logo.png" alt="HS Foundation" />
+                    <img src="../Sponsors%20images/MCN%20Logo.png" alt="MCN" />
+                    <img src="../Sponsors%20images/Novartis.png" alt="Novartis" />
+                    <img src="../Sponsors%20images/UCB%20Logo.png" alt="UCB" />
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div id="footer-newsletter" class="footer-newsletter">
+                <div>
+                    <h4>Join our Newsletter!</h4>
+                    <p>Be part of the IAHSN community and stay informed with the latest news, trusted education, upcoming events, and opportunities to connect.</p>
+                    <p>When you subscribe to the HS Speaks Newsletter, you'll receive:</p>
+                    <ul class="newsletter-benefits">
+                        <li>Practical tips and educational resources</li>
+                        <li>Early access to workshops, webinars, and special events</li>
+                        <li>Updates on IAHSN programs and initiatives</li>
+                        <li>Inspiring community stories and advocacy news</li>
+                        <li>Announcements about new resources and ways to get involved</li>
+                    </ul>
+                    <p>Join our growing community and never miss what's happening at IAHSN.</p>
+                </div>
+                <button id="newsletter-btn"> Sign Up </button>
+            </div>
+
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="Logos/IAHSN Transparent Logo - New.png" alt="IAHSN logo" />
+                    <p>Education, support, and advocacy for people affected by Hidradenitis Suppurativa.</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>45 Brockton Street<br />Mattapan, MA 02126</p>
+                    <p>Phone: <a href="tel:+18662048566">617-593-1883</a></p>
+                    <p>Email: <a href="mailto:info@iahsn.org">info@iahsn.org</a></p>
+                </div>
+
+                <div class="footer-socials">
+                    <h4>Socials</h4>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 IAHSN. All rights reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="Terms and Privacy Policy/Terms%20%26%20Conditions.pdf" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+                    <a href="Terms and Privacy Policy/Privacy%20Poicy.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
