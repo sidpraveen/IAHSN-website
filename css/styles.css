@@ -66,14 +66,23 @@ a {
 }
 
 .navbar.scrolled {
-    min-height: 142px;
+    min-height: 104px;
     box-shadow: 0 14px 34px rgba(24, 32, 47, 0.1);
 }
 
 .nav-topbar {
     width: 100%;
+    max-height: 48px;
+    overflow: hidden;
     background:
         linear-gradient(90deg, rgba(6, 101, 132, 0.98), rgba(23, 63, 122, 0.98) 46%, rgba(75, 24, 201, 0.96) 100%);
+    opacity: 1;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.navbar.scrolled .nav-topbar {
+    max-height: 0;
+    opacity: 0;
 }
 
 .nav-topbar-inner {
@@ -86,7 +95,7 @@ a {
 }
 
 .navbar.scrolled .nav-topbar-inner {
-    min-height: 38px;
+    min-height: 0;
 }
 
 .nav-top-link {
