@@ -1,3 +1,37 @@
+
+const heroSlides = document.querySelectorAll('[data-hero-slide]');
+const heroDots = document.querySelectorAll('[data-hero-dot]');
+const heroPrev = document.querySelector('[data-hero-prev]');
+const heroNext = document.querySelector('[data-hero-next]');
+
+if (heroSlides.length && heroDots.length) {
+  let heroIndex = 0;
+
+  const showHeroSlide = (index) => {
+    heroIndex = (index + heroSlides.length) % heroSlides.length;
+    heroSlides.forEach((slide, slideIndex) => {
+      slide.classList.toggle('active', slideIndex === heroIndex);
+    });
+    heroDots.forEach((dot, dotIndex) => {
+      dot.classList.toggle('active', dotIndex === heroIndex);
+    });
+  };
+
+  heroDots.forEach((dot) => {
+    dot.addEventListener('click', () => showHeroSlide(Number(dot.dataset.heroDot)));
+  });
+
+  if (heroPrev) {
+    heroPrev.addEventListener('click', () => showHeroSlide(heroIndex - 1));
+  }
+
+  if (heroNext) {
+    heroNext.addEventListener('click', () => showHeroSlide(heroIndex + 1));
+  }
+
+  setInterval(() => showHeroSlide(heroIndex + 1), 25000);
+}
+
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 50) {
