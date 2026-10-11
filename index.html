@@ -48,10 +48,10 @@
                         <a href="#resources" aria-haspopup="true">RESOURCES</a>
                         <ul class="nav-dropdown" aria-label="Resources submenu">
                             <li class="nav-dropdown-item has-submenu">
-                                <a href="#" aria-haspopup="true">Find Care &amp; Support</a>
+                                <a href="directory.html" aria-haspopup="true">Find Care &amp; Support</a>
                                 <ul class="nav-subdropdown" aria-label="Find Care and Support submenu">
-                                    <li><a href="#">Healthcare</a></li>
-                                    <li><a href="#">Mental Health</a></li>
+                                    <li><a href="directory.html?type=medical">Healthcare</a></li>
+                                    <li><a href="directory.html?type=mental-health">Mental Health</a></li>
                                 </ul>
                             </li>
                             <li><a href="#mental-health-hub">Mental Health Hub</a></li>
@@ -77,9 +77,16 @@
                             <li><a href="#">Community Action Opportunities</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a href="directory.html">FIND CARE</a></li>
                     <li class="nav-item"><a href="#">MEMBERS</a></li>
                     <li class="nav-item"><a href="Health%20A-Z/health-a-z.html">Health A-Z</a></li>
-                    <li class="nav-item"><a href="about.html">ABOUT</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" aria-haspopup="true">ABOUT</a>
+                        <ul class="nav-dropdown" aria-label="About submenu">
+                            <li><a href="about.html">About IAHSN</a></li>
+                            <li><a href="about.html#partners-sponsors">Partners &amp; Sponsors</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
             </nav>
@@ -126,10 +133,6 @@
 
                     <div class="eec-visual" aria-hidden="true">
                         <img src="Educate,%20Empower,%20Connect/People%20Looking%20Over%20the%20Horizon.png" alt="" />
-                        <div class="eec-floating-note">
-                            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-                            <span>Connection, education, and support moving together.</span>
-                        </div>
                     </div>
                 </div>
 
@@ -205,11 +208,12 @@
                     <div class="shop-promo-copy">
                         <h2>Visit IAHSN's online shop</h2>
                         <p>
-                            Explore free and premium education and resources developed to support every stage of the HS journey.
-                            Download practical guides, treatment and medication references, toolkits, workbooks, and other resources
-                            designed to educate, empower, and help you confidently manage life with HS.
+                            Explore IAHSN's collection of educational resources and practical tools designed to help you better understand and navigate Hidradenitis Suppurativa (HS).
                         </p>
-                        <a href="#" class="shop-promo-button">Click Here</a>
+                        <p>
+                            Access free downloadable guides, action plans, worksheets, checklists, posters, mental wellness resources, and other educational tools to support you throughout your HS journey.
+                        </p>
+                        <a href="#" class="shop-promo-button">SHOP NOW</a>
                     </div>
                 </div>
             </section>
@@ -253,17 +257,6 @@
                                 <button type="button">Read More</button>
                             </div>
                         </article>
-                    </div>
-
-                    <div class="hs-news-archive-menu">
-                        <button type="button" aria-label="Browse HS in the News archive categories">
-                            HS in the News Archive <span aria-hidden="true">v</span>
-                        </button>
-                        <div class="hs-news-archive-dropdown" aria-label="Archive categories">
-                            <button type="button">Educate</button>
-                            <button type="button">Empower</button>
-                            <button type="button">Connect</button>
-                        </div>
                     </div>
 
                 </div>
@@ -419,14 +412,15 @@
             </section>
         </main>
 
-        <section class="sponsors-band" aria-label="Sponsors">
+        <section class="sponsors-band recognition-band" aria-label="Recognition and accountability">
             <div class="sponsors-band-inner">
-                <div class="sponsors-logo-row">
-                    <img src="Sponsors%20images/HS%20Foundation%20Logo.png" alt="HS Foundation" />
-                    <img src="Sponsors%20images/MCN%20Logo.png" alt="MCN" />
-                    <img src="Sponsors%20images/Novartis.png" alt="Novartis" />
-                    <img src="Sponsors%20images/UCB%20Logo.png" alt="UCB" />
-                    <img src="Sponsors%20images/papaya.png" alt="Papaya" />
+                <div class="recognition-row">
+                    <div class="recognition-badge">
+                        <span>Candid</span>
+                    </div>
+                    <div class="recognition-badge">
+                        <img src="Sponsors%20images/Charity%20Navigator%20Logo.jpeg" alt="Charity Navigator" loading="lazy" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -447,12 +441,12 @@
                     </ul>
                     <p>Join our growing community and never miss what's happening at IAHSN.</p>
                 </div>
-                <button id="newsletter-btn"> Subcribe </button>
+                <button id="newsletter-btn"> SUBSCRIBE </button>
             </div>
 
             <div class="footer-container">
                 <div class="footer-brand">
-                    <img src="Logos/IAHSN Transparent Logo - New.png" alt="IAHSN logo" />
+                    <img class="footer-logo-white" src="Logos/IAHSN%20Logo%20-%20White%20(transparent).png" alt="IAHSN logo" />
                     <p>Education, support, and advocacy for people affected by Hidradenitis Suppurativa.</p>
                 </div>
 

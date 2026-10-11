@@ -48,10 +48,10 @@
                         <a href="index.html#resources" aria-haspopup="true">RESOURCES</a>
                         <ul class="nav-dropdown" aria-label="Resources submenu">
                             <li class="nav-dropdown-item has-submenu">
-                                <a href="#" aria-haspopup="true">Find Care &amp; Support</a>
+                                <a href="directory.html" aria-haspopup="true">Find Care &amp; Support</a>
                                 <ul class="nav-subdropdown" aria-label="Find Care and Support submenu">
-                                    <li><a href="#">Healthcare</a></li>
-                                    <li><a href="#">Mental Health</a></li>
+                                    <li><a href="directory.html?type=medical">Healthcare</a></li>
+                                    <li><a href="directory.html?type=mental-health">Mental Health</a></li>
                                 </ul>
                             </li>
                             <li><a href="Health%20A-Z/health-a-z.html">Health A–Z</a></li>
@@ -82,56 +82,29 @@
                             <li><a href="#">Community Action Opportunities</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a href="directory.html">FIND CARE</a></li>
                     <li class="nav-item"><a href="#">MEMBERS</a></li>
                     <li class="nav-item"><a href="Health%20A-Z/health-a-z.html">Health A-Z</a></li>
-                    <li class="nav-item"><a href="about.html" aria-current="page">ABOUT</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="about.html" aria-current="page" aria-haspopup="true">ABOUT</a>
+                        <ul class="nav-dropdown" aria-label="About submenu">
+                            <li><a href="about.html">About IAHSN</a></li>
+                            <li><a href="#partners-sponsors">Partners &amp; Sponsors</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
             </nav>
         </header>
 
         <main>
-            <section class="about-hero">
-                <div class="about-hero-copy">
-                    <h1>Building education, support, and advocacy around the HS community.</h1>
-                    <p>
-                        IAHSN provides holistic, patient-centered support for individuals impacted by
-                        Hidradenitis Suppurativa through advocacy, education, emotional wellness,
-                        community engagement, and empowerment-focused programs.
-                    </p>
-                </div>
-            </section>
-
-            <section class="about-mission-page">
-                <div class="section-inner about-story-grid">
-                    <div>
-                        <h2>To improve quality of life and foster resilience for individuals impacted by HS.</h2>
-                    </div>
-
-                    <div class="about-story-copy">
-                        <p>
-                            To provide holistic, patient-centered support for individuals impacted by
-                            Hidradenitis Suppurativa (HS) through advocacy, education, emotional wellness
-                            initiatives, community engagement, and empowerment-focused programs that improve
-                            quality of life and foster resilience.
-                        </p>
-                        <p>
-                            Hidradenitis Suppurativa can affect far more than the skin. IAHSN centers the lived
-                            experiences of patients and families while working to make support easier to find,
-                            information easier to understand, and conversations about HS more compassionate.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
             <section class="community-day-section">
                 <div class="section-inner community-day-layout">
                     <div class="community-day-copy">
-                        <h2>IAHSN leadership at HS Community Day</h2>
+                        <h2>HS Education and Community Day</h2>
                         <p>
-                            Members of the IAHSN board and community gathered at HS Community Day at Northwestern
-                            to connect, learn, and continue building support for people affected by Hidradenitis
-                            Suppurativa.
+                            The HS community came together at Northwestern University's Simpson Querrey Auditorium for HS Education & Community Day, a day dedicated to learning, connection, shared experiences, 
+                            and strengthening support for people affected by Hidradenitis Suppurativa.
                         </p>
                     </div>
 
@@ -216,16 +189,29 @@
                     </div>
                 </div>
             </section>
-        </main>
-
-        <section class="sponsors-band" aria-label="Sponsors">
+        <section id="partners-sponsors" class="sponsors-band partners-section" aria-labelledby="partners-title">
             <div class="sponsors-band-inner">
+                <h2 id="partners-title">Partners &amp; Sponsors</h2>
                 <div class="sponsors-logo-row">
-                    <img src="Sponsors%20images/HS%20Foundation%20Logo.png" alt="HS Foundation" />
-                    <img src="Sponsors%20images/MCN%20Logo.png" alt="MCN" />
+                    <img src="Sponsors%20images/HS%20Foundation%20Logo.png" alt="Hidradenitis Suppurativa Foundation" />
+                    <img src="Sponsors%20images/MCN%20Logo.png" alt="Massachusetts Council of Nonprofits (MCN)" />
                     <img src="Sponsors%20images/Novartis.png" alt="Novartis" />
                     <img src="Sponsors%20images/UCB%20Logo.png" alt="UCB" />
                     <img src="Sponsors%20images/papaya.png" alt="Papaya" />
+                    <img src="Sponsors%20images/Charity%20Navigator%20Logo.jpeg" alt="Charity Navigator" loading="lazy" />
+                    <div class="partner-pending"><strong>National Health Council</strong><span>Membership coming soon</span></div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+        <section class="sponsors-band recognition-band" aria-label="Recognition and accountability">
+            <div class="sponsors-band-inner">
+                <div class="recognition-row">
+                    <div class="recognition-badge"><span>Candid</span></div>
+                    <div class="recognition-badge">
+                        <img src="Sponsors%20images/Charity%20Navigator%20Logo.jpeg" alt="Charity Navigator" loading="lazy" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -251,7 +237,7 @@
 
             <div class="footer-container">
                 <div class="footer-brand">
-                    <img src="Logos/IAHSN Transparent Logo - New.png" alt="IAHSN logo" />
+                    <img class="footer-logo-white" src="Logos/IAHSN%20Logo%20-%20White%20(transparent).png" alt="IAHSN logo" />
                     <p>Education, support, and advocacy for people affected by Hidradenitis Suppurativa.</p>
                 </div>
 
