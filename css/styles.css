@@ -360,12 +360,14 @@ a {
     align-items: start;
     padding: 244px 8% 54px;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transition: opacity 0.55s ease;
 }
 
 .hero-slide.active {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
 }
 
@@ -3489,4 +3491,142 @@ footer {
     .community-day-section {
         padding: 230px 0 64px;
     }
+}
+
+/* Keep the hover path continuous between a menu label and its panel. */
+.nav-dropdown::before {
+    content: "";
+    position: absolute;
+    inset: -12px 0 auto;
+    height: 12px;
+}
+
+.nav-about .nav-dropdown {
+    top: 100%;
+    max-height: calc(100dvh - 220px);
+    overflow-y: auto;
+}
+
+.nav-about .nav-subdropdown {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin: 0 14px;
+    padding: 0;
+    border-left: 3px solid var(--iahsn-cyan);
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.nav-about .has-submenu:hover > .nav-subdropdown,
+.nav-about .has-submenu:focus-within > .nav-subdropdown,
+.nav-about .has-submenu.is-open > .nav-subdropdown {
+    display: grid;
+}
+
+.nav-about .nav-subdropdown a {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+}
+
+.nav-about .has-submenu > a::after { transform: rotate(45deg); }
+.nav-menu-toggle { display: none; }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+.hero-pause {
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    color: #fff;
+    background: #173f7a;
+    font: inherit;
+    cursor: pointer;
+}
+.pending-dialog {
+    width: min(480px, 90vw);
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #bdcedb;
+    border-radius: 12px;
+    color: var(--iahsn-ink);
+}
+.pending-dialog::backdrop { background: rgba(24, 32, 47, 0.6); }
+.pending-dialog h2 { margin-bottom: 16px; color: var(--iahsn-blue-dark); }
+.pending-dialog p { line-height: 1.6; margin-bottom: 24px; }
+.pending-dialog a { color: var(--iahsn-blue-dark); }
+.pending-dialog button { margin-left: 20px; padding: 10px 18px; cursor: pointer; }
+.navigate-coming-soon { text-decoration: none; }
+main [id] { scroll-margin-top: 225px; }
+.about-mission-page h1 { font-size: clamp(2.5rem, 5vw, 4rem); color: var(--iahsn-blue-dark); margin-bottom: 22px; }
+.about-mission-page > .section-inner > p { color: var(--iahsn-muted); line-height: 1.7; }
+.event-community-day { padding: 70px 0; }
+.event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; }
+.event-grid h2 { color: var(--iahsn-blue-dark); font-size: 1.5rem; margin-bottom: 18px; }
+.event-grid a { display: inline-block; margin-top: 16px; }
+.director-board-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.student-board-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.student-board-card h3:last-child { margin-bottom: 24px; }
+
+@media (max-width: 1080px) {
+    .nav-menu-toggle {
+        display: block;
+        align-self: center;
+        padding: 10px 24px;
+        background: white;
+        border: 1px solid #bdcedb;
+        border-radius: 6px;
+        color: var(--iahsn-blue-dark);
+        font: inherit;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: calc(100dvh - 230px);
+        overflow-y: auto;
+        width: 96%;
+        padding: 12px;
+    }
+    .navbar.scrolled .nav-menu { max-height: calc(100dvh - 130px); }
+    .navbar.nav-open .nav-menu { display: flex; }
+    .nav-menu > .nav-item > a { display: flex; padding: 14px 8px; line-height: 1.3; }
+    .nav-item .nav-dropdown,
+    .nav-item:hover .nav-dropdown,
+    .nav-item:focus-within .nav-dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        padding: 0;
+        max-height: none;
+        overflow: visible;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        box-shadow: none;
+    }
+    .nav-item.is-open > .nav-dropdown { display: grid; }
+    .nav-dropdown::before { display: none; }
+    .nav-dropdown a { padding: 12px 18px; }
+    .nav-about .has-submenu:hover > .nav-subdropdown,
+    .nav-about .has-submenu:focus-within > .nav-subdropdown { display: none; }
+    .nav-about .has-submenu.is-open > .nav-subdropdown { display: grid; }
+    .director-board-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+    .director-board-grid, .student-board-grid { grid-template-columns: 1fr; }
 }

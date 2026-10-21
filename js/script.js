@@ -1,19 +1,73 @@
 
+const navigation = document.querySelector(".navbar");
+const menuToggle = document.querySelector(".nav-menu-toggle");
+const compactNavigation = window.matchMedia("(max-width: 1080px)");
+
+function closeNavigation() {
+  navigation?.classList.remove("nav-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  navigation?.querySelectorAll(".is-open").forEach((item) => {
+    item.classList.remove("is-open");
+    item.querySelector(":scope > a")?.setAttribute("aria-expanded", "false");
+  });
+}
+
+menuToggle?.addEventListener("click", () => {
+  if (navigation.classList.contains("nav-open")) {
+    closeNavigation();
+  } else {
+    navigation.classList.add("nav-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+  }
+});
+
+navigation?.querySelectorAll(".has-dropdown > a, .has-submenu > a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (!compactNavigation.matches) return;
+    if (!link.parentElement.classList.contains("is-open")) {
+      event.preventDefault();
+      link.parentElement.classList.add("is-open");
+      link.setAttribute("aria-expanded", "true");
+    } else {
+      closeNavigation();
+    }
+  });
+});
+navigation?.querySelectorAll(".nav-dropdown a:not([aria-haspopup]), .nav-menu > .nav-item:not(.has-dropdown) a").forEach((link) => {
+  link.addEventListener("click", closeNavigation);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navigation?.classList.contains("nav-open")) {
+    closeNavigation();
+    menuToggle.focus();
+  }
+});
+document.addEventListener("click", (event) => {
+  if (navigation && !navigation.contains(event.target)) closeNavigation();
+});
+compactNavigation.addEventListener("change", closeNavigation);
+
 const heroSlides = document.querySelectorAll('[data-hero-slide]');
 const heroDots = document.querySelectorAll('[data-hero-dot]');
 const heroPrev = document.querySelector('[data-hero-prev]');
 const heroNext = document.querySelector('[data-hero-next]');
+const heroPause = document.querySelector('[data-hero-pause]');
 
 if (heroSlides.length && heroDots.length) {
   let heroIndex = 0;
+  let paused = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const showHeroSlide = (index) => {
     heroIndex = (index + heroSlides.length) % heroSlides.length;
     heroSlides.forEach((slide, slideIndex) => {
-      slide.classList.toggle('active', slideIndex === heroIndex);
+      const active = slideIndex === heroIndex;
+      slide.classList.toggle('active', active);
+      slide.inert = !active;
+      slide.setAttribute("aria-hidden", String(!active));
     });
     heroDots.forEach((dot, dotIndex) => {
       dot.classList.toggle('active', dotIndex === heroIndex);
+      dot.setAttribute("aria-pressed", String(dotIndex === heroIndex));
     });
   };
 
@@ -29,11 +83,26 @@ if (heroSlides.length && heroDots.length) {
     heroNext.addEventListener('click', () => showHeroSlide(heroIndex + 1));
   }
 
-  setInterval(() => showHeroSlide(heroIndex + 1), 25000);
+  const updatePauseLabel = () => {
+    if (heroPause) heroPause.textContent = paused ? "Play slideshow" : "Pause slideshow";
+  };
+  heroPause?.addEventListener("click", () => {
+    paused = !paused;
+    updatePauseLabel();
+  });
+  showHeroSlide(0);
+  updatePauseLabel();
+  setInterval(() => {
+    const hero = document.querySelector("#hero-section");
+    if (!paused && !document.hidden && !hero.contains(document.activeElement) && !hero.matches(":hover")) {
+      showHeroSlide(heroIndex + 1);
+    }
+  }, 25000);
 }
 
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
   } else {
@@ -182,8 +251,42 @@ if (azSearchInput && azTopicCards.length) {
   };
 
   azSearchInput.addEventListener("input", updateAzSearch);
+  updateAzSearch();
   azSearchForm?.addEventListener("submit", (event) => {
     event.preventDefault();
     updateAzSearch();
   });
 }
+
+// Unconfigured destinations must not look like working forms or jump to the top.
+const pendingDialog = document.createElement("dialog");
+pendingDialog.className = "pending-dialog";
+pendingDialog.setAttribute("aria-labelledby", "pending-title");
+const pendingTitle = document.createElement("h2");
+pendingTitle.id = "pending-title";
+const pendingMessage = document.createElement("p");
+const pendingContact = document.createElement("a");
+pendingContact.href = "mailto:info@iahsn.org";
+pendingContact.textContent = "Contact IAHSN";
+const pendingClose = document.createElement("button");
+pendingClose.type = "button";
+pendingClose.textContent = "Close";
+pendingClose.addEventListener("click", () => pendingDialog.close());
+pendingDialog.append(pendingTitle, pendingMessage, pendingContact, pendingClose);
+document.body.append(pendingDialog);
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest('a[href="#"], #newsletter-btn, .hs-news-card button');
+  if (!trigger) return;
+  event.preventDefault();
+  closeNavigation();
+  pendingTitle.textContent = trigger.closest(".hs-news-card")?.querySelector("h3")?.textContent
+    || trigger.getAttribute("aria-label") || trigger.textContent.trim();
+  pendingMessage.textContent = trigger.dataset.pendingMessage
+    || (trigger.id === "newsletter-btn"
+      ? "Online newsletter signup is not available yet. Please contact IAHSN for newsletter information."
+      : trigger.closest(".hs-news-card")
+        ? "The full article has not been added yet. Please check back for updates."
+        : "This feature is not available yet. Please contact IAHSN for more information.");
+  pendingDialog.showModal();
+});
