@@ -113,8 +113,33 @@ about = (ROOT / "about.html").read_text()
 events = (ROOT / "events.html").read_text()
 if "<h1>Our Mission</h1>" not in about:
     errors.append("about.html: mission heading has regressed")
-if "community-day-photo" in about or "community-day-photo" not in events:
-    errors.append("Community Day must be in Events, not About Us")
+community_day = (ROOT / "community-day.html").read_text()
+if "community-day-photo" in about or "community-day-photo" not in community_day:
+    errors.append("Community Day content must be on its own event page, not About Us")
+if 'href="community-day.html"' not in events:
+    errors.append("Events must link to the Community Day page")
+
+for filename in ["what-is-hs.html", "faq.html", "understand-hs.html", "hs-navigate.html",
+                 "voices-of-hs.html", "ask-the-expert.html", "our-people.html",
+                 "partners-sponsorships.html", "get-involved.html", "community-day.html",
+                 "virtual-conference.html", "purple-table.html"]:
+    source = (ROOT / filename).read_text()
+    if source.count("<h1>") != 1:
+        errors.append(f"{filename}: expected one main heading")
+
+faq = (ROOT / "faq.html").read_text()
+navigate = (ROOT / "hs-navigate.html").read_text()
+if any(symbol in faq for symbol in ["\u274c", "\u274e"]):
+    errors.append("FAQ must not include X emojis")
+if faq.count('<details class="faq-item">') != 5:
+    errors.append("HS FAQ must contain all five questions")
+if navigate.count('<details class="faq-item">') != 6:
+    errors.append("HS Navigate must contain all six program FAQs")
+for week in range(1, 8):
+    if f"<strong>Week {week}</strong>" not in navigate:
+        errors.append(f"HS Navigate is missing week {week}")
+if 'href="navigate-application.html"' not in navigate:
+    errors.append("HS Navigate must link to registration information")
 if errors:
     print("\n".join(errors))
     raise SystemExit(1)

@@ -1,0 +1,219 @@
+/* Shared layout for the site's educational and program detail pages. */
+.content-skip {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 2000;
+    padding: 12px 18px;
+    background: #ffffff;
+    color: var(--iahsn-blue-dark);
+    transform: translateY(-160%);
+}
+
+.content-skip:focus {
+    transform: translateY(0);
+}
+
+.content-hero {
+    padding: 285px 0 56px;
+    background: linear-gradient(120deg, var(--iahsn-sky-soft), #ffffff 58%, var(--iahsn-purple-soft));
+    border-bottom: 1px solid #dbe6ef;
+}
+
+.content-eyebrow {
+    color: var(--iahsn-blue);
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    margin-bottom: 14px;
+}
+
+.content-hero h1 {
+    max-width: 1000px;
+    color: var(--iahsn-blue-dark);
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+}
+
+.content-intro {
+    max-width: 780px;
+    margin-top: 22px;
+    color: var(--iahsn-muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.content-program-logo {
+    display: block;
+    width: min(100%, 400px);
+    height: auto;
+    margin-top: 24px;
+}
+
+.content-body {
+    max-width: 1100px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+}
+
+.content-body p,
+.content-body li {
+    color: var(--iahsn-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.content-body p + p {
+    margin-top: 16px;
+}
+
+.content-section {
+    padding: 36px 0;
+    border-bottom: 1px solid #dbe6ef;
+    scroll-margin-top: 130px;
+}
+
+.content-section h2 {
+    color: var(--iahsn-blue-dark);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.content-section h3 {
+    color: var(--iahsn-ink);
+    margin: 24px 0 10px;
+    font-size: 1.2rem;
+}
+
+.content-section ul {
+    padding-left: 24px;
+    margin: 16px 0;
+}
+
+.content-section li + li {
+    margin-top: 10px;
+}
+
+.content-body a:not(.content-button) {
+    color: var(--iahsn-blue-dark);
+    text-underline-offset: 4px;
+}
+
+.content-button {
+    display: inline-block;
+    padding: 13px 20px;
+    margin: 18px 12px 0 0;
+    border: 2px solid var(--iahsn-blue-dark);
+    border-radius: 7px;
+    background: var(--iahsn-blue-dark);
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.content-button:hover {
+    background: var(--iahsn-blue);
+}
+
+.content-button-secondary {
+    background: #ffffff;
+    color: var(--iahsn-blue-dark);
+}
+
+.content-button-secondary:hover {
+    background: var(--iahsn-sky-soft);
+}
+
+.content-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+}
+
+.content-card {
+    padding: 26px;
+    border: 1px solid #dbe6ef;
+    border-top: 4px solid var(--iahsn-cyan);
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.content-card h3 {
+    margin-top: 0;
+}
+
+.content-card a {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.faq-item {
+    margin-top: 14px;
+    border: 1px solid #dbe6ef;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.faq-item summary {
+    padding: 20px 24px;
+    color: var(--iahsn-blue-dark);
+    font-size: 1.1rem;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.faq-item[open] summary {
+    background: var(--iahsn-sky-soft);
+}
+
+.faq-item > div {
+    padding: 20px 24px;
+}
+
+.program-weeks {
+    margin: 24px 0;
+    list-style: none;
+}
+
+.program-weeks li {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 20px;
+    padding: 18px 22px;
+    border-left: 4px solid var(--iahsn-cyan);
+    background: var(--iahsn-sky-soft);
+}
+
+.content-badge {
+    display: block;
+    width: min(100%, 280px);
+    height: auto;
+    margin-bottom: 32px;
+}
+
+.content-page :focus-visible {
+    outline: 3px solid var(--iahsn-blue);
+    outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+    .content-hero {
+        padding-top: 260px;
+        padding-bottom: 36px;
+    }
+
+    .content-card,
+    .faq-item summary,
+    .faq-item > div {
+        padding: 18px;
+    }
+
+    .program-weeks li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
